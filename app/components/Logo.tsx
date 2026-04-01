@@ -2,7 +2,7 @@ export default function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   const sizeMap = {
     sm: "text-xl",
     md: "text-2xl",
-    lg: "text-4xl md:text-5xl",
+    lg: "text-6xl md:text-8xl lg:text-9xl",
   };
 
   return (

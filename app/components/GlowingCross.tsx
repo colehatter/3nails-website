@@ -7,7 +7,7 @@ export default function GlowingCross() {
       <div
         className="absolute inset-0 rounded-full"
         style={{
-          background: "radial-gradient(ellipse at 50% 50%, rgba(52,198,244,0.18) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.12) 0%, transparent 70%)",
           filter: "blur(20px)",
         }}
       />
@@ -33,9 +33,9 @@ export default function GlowingCross() {
             </feMerge>
           </filter>
           <linearGradient id="crossGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#34C6F4" stopOpacity="0.9" />
-            <stop offset="50%" stopColor="#34C6F4" stopOpacity="1" />
-            <stop offset="100%" stopColor="#1b9ec5" stopOpacity="0.7" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+            <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
+            <stop offset="100%" stopColor="#d0d8e0" stopOpacity="0.8" />
           </linearGradient>
           <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#9A8A5C" stopOpacity="0.3" />
@@ -45,9 +45,9 @@ export default function GlowingCross() {
         </defs>
         
         {/* Outer glow cross */}
-        <g filter="url(#outerGlow)" opacity="0.4">
-          <rect x="88" y="10" width="24" height="240" rx="2" fill="#34C6F4" />
-          <rect x="30" y="60" width="140" height="24" rx="2" fill="#34C6F4" />
+        <g filter="url(#outerGlow)" opacity="0.3">
+          <rect x="88" y="10" width="24" height="240" rx="2" fill="#ffffff" />
+          <rect x="30" y="60" width="140" height="24" rx="2" fill="#ffffff" />
         </g>
         
         {/* Gold outline cross */}
@@ -66,9 +66,9 @@ export default function GlowingCross() {
             y1="72"
             x2={100 + Math.cos((angle * Math.PI) / 180) * 80}
             y2={72 + Math.sin((angle * Math.PI) / 180) * 80}
-            stroke="#34C6F4"
+            stroke="#ffffff"
             strokeWidth="0.5"
-            opacity="0.15"
+            opacity="0.2"
           />
         ))}
       </svg>
