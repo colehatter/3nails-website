@@ -112,49 +112,90 @@ export default function Home() {
       {/* WHO WE ARE */}
       <section style={{ maxWidth: 800, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">Who We Are</span>
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
               color: "#c8d4e0",
-              lineHeight: 1.85,
+              lineHeight: 1.8,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            We are a team of Christians building technology — not despite our
-            faith, but because of it. 3Nails.ai exists to create AI tools that
-            the Church can trust, use, and stand behind. Our name comes from the
-            three nails of the crucifixion. That's not branding. That's our
-            foundation.
+            3Nails.ai is a Christian technology company building AI tools
+            specifically for the Church.
           </p>
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
               color: "#c8d4e0",
-              lineHeight: 1.85,
+              lineHeight: 1.8,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            The Church deserves better than tools built by people who don't
-            understand her. Pastors shouldn't have to wonder whether the AI
-            answering their congregation's questions aligns with Scripture.
-            Believers shouldn't have to settle for generic tools that treat
-            their faith as a filter, not a foundation. We're here to change
-            that — one product at a time.
+            We believe pastors and church leaders shouldn&apos;t have to rely on
+            generic AI systems that weren&apos;t designed with Scripture, theology,
+            or the local church in mind. Our mission is simple: create tools you
+            can trust — tools that serve your ministry, respect your doctrine,
+            and support your people well.
           </p>
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
               color: "#c8d4e0",
-              lineHeight: 1.85,
+              lineHeight: 1.8,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            This is not a market play. This is obedience. We believe God is
-            moving in this cultural moment, and that Christians in technology
-            have a responsibility to show up — faithfully, excellently, and
-            without compromise. That's the conviction 3Nails was founded on,
-            and it's what drives every line of code we write.
+            Our name comes from the three nails of the crucifixion. It&apos;s not
+            branding — it&apos;s our foundation. Everything we build is shaped by a
+            commitment to biblical truth, theological integrity, and real-world
+            usefulness for the Church.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            We exist to strengthen and extend the work already happening in the
+            Church — helping pastors lead, equipping teams to respond, and
+            serving people with clarity and care.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            Our Church OS helps churches answer questions, serve their
+            communities, and steward their time more effectively.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            We believe this moment matters. Technology is shaping how people
+            seek truth, ask questions, and engage with faith. The Church
+            deserves to be equipped — not left behind.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#ffffff",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+              fontWeight: 500,
+            }}
+          >
+            So we&apos;re building: faithfully, thoughtfully, and without compromise.
           </p>
         </div>
       </section>
