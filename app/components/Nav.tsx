@@ -61,11 +61,14 @@ export default function Nav() {
 
         {/* Nav Links */}
         <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-          <Link href="/church-os" className="nav-link">
-            Church OS
+          <Link href="/" className="nav-link">
+            Home
           </Link>
           <Link href="/mission" className="nav-link">
             Our Mission
+          </Link>
+          <Link href="/church-os" className="nav-link">
+            Church OS
           </Link>
           <a href="mailto:cole@3nails.ai" className="btn-primary" style={{ padding: "10px 22px", fontSize: 14 }}>
             Book a Pilot
