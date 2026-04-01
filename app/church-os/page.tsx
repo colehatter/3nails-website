@@ -10,7 +10,7 @@ export default function ChurchOS() {
       <section
         style={{
           position: "relative",
-          padding: "120px 32px 100px",
+          padding: "96px 32px 72px",
           textAlign: "center",
           overflow: "hidden",
         }}
@@ -36,7 +36,7 @@ export default function ChurchOS() {
             fontWeight: 700,
             color: "#ffffff",
             maxWidth: 700,
-            margin: "0 auto 24px",
+            margin: "0 auto 20px",
             lineHeight: 1.15,
           }}
         >
@@ -46,9 +46,9 @@ export default function ChurchOS() {
           style={{
             fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
             color: "#8a9ab0",
-            maxWidth: 620,
-            margin: "0 auto 44px",
-            lineHeight: 1.8,
+            maxWidth: 580,
+            margin: "0 auto 36px",
+            lineHeight: 1.75,
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
@@ -63,20 +63,115 @@ export default function ChurchOS() {
 
       <div className="section-divider" />
 
+      {/* WHY NOW — The Market Argument */}
+      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "64px 32px" }}>
+        <span className="section-label">The Moment</span>
+        <h2
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+            fontWeight: 700,
+            color: "#ffffff",
+            maxWidth: 600,
+            lineHeight: 1.25,
+            marginBottom: 40,
+          }}
+        >
+          Faith Is Not Declining — It&apos;s Shifting.
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: 20,
+            marginBottom: 36,
+          }}
+        >
+          {[
+            { value: "19M+", label: "Bible units sold in 2025 — doubled vs. 2019" },
+            { value: "10M+", label: "New Bible users in a single year" },
+            { value: "62%", label: "of U.S. identifies as Christian" },
+            { value: "57%", label: "rarely or never attend church" },
+          ].map((stat, i) => (
+            <div key={i} className="card card-hover" style={{ padding: "28px 20px", textAlign: "center" }}>
+              <div
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontWeight: 700,
+                  color: "#34C6F4",
+                  textShadow: "0 0 20px rgba(52,198,244,0.4)",
+                  lineHeight: 1,
+                  marginBottom: 10,
+                }}
+              >
+                {stat.value}
+              </div>
+              <div style={{ color: "#8a9ab0", fontSize: 13, lineHeight: 1.5 }}>{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            background: "rgba(52,198,244,0.06)",
+            border: "1px solid rgba(52,198,244,0.2)",
+            borderRadius: 10,
+            padding: "22px 32px",
+            textAlign: "center",
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1rem, 1.8vw, 1.25rem)",
+            fontStyle: "italic",
+            color: "#ffffff",
+            fontWeight: 600,
+          }}
+        >
+          Demand is rising. The infrastructure does not exist yet.
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* THE PROBLEM */}
-      <section style={{ maxWidth: 800, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">The Problem</span>
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+
+        <div
+          style={{
+            background: "rgba(154,138,92,0.08)",
+            borderLeft: "3px solid rgba(154,138,92,0.5)",
+            padding: "24px 28px",
+            borderRadius: "0 8px 8px 0",
+            marginBottom: 32,
+          }}
+        >
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+              fontStyle: "italic",
+              fontSize: "clamp(1rem, 2vw, 1.2rem)",
+              color: "#ffffff",
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            57% of Americans who identify as Christian rarely or never attend church.
+            That&apos;s not a faith problem. That&apos;s an infrastructure problem.
+          </p>
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
               color: "#c8d4e0",
-              lineHeight: 1.85,
+              lineHeight: 1.8,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
             Ministry never stops — but your team has to. Every week, first-time
-            visitors leave your service with questions they don't know how to
+            visitors leave your service with questions they don&apos;t know how to
             ask. Members reach out on a Tuesday night with something heavy on
             their heart. Families explore your website at midnight trying to
             figure out if your church is the right fit. And more often than
@@ -84,17 +179,14 @@ export default function ChurchOS() {
           </p>
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
               color: "#c8d4e0",
-              lineHeight: 1.85,
+              lineHeight: 1.8,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            This isn't a failure of care. It's a capacity problem. Your staff
-            is already doing more than any small team should have to carry.
-            Church OS doesn't replace your people — it extends them. It's the
-            presence your church can't always afford to staff, delivered with
-            the consistency and theological care your congregation deserves.
+            This isn&apos;t a failure of care. It&apos;s a capacity problem. Church OS
+            doesn&apos;t replace your people — it extends them.
           </p>
         </div>
       </section>
@@ -102,15 +194,15 @@ export default function ChurchOS() {
       <div className="section-divider" />
 
       {/* WHAT CHURCH OS DOES */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">What Church OS Does</span>
         <h2
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 700,
             color: "#ffffff",
-            marginBottom: 56,
+            marginBottom: 44,
             maxWidth: 480,
           }}
         >
@@ -121,40 +213,40 @@ export default function ChurchOS() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 24,
+            gap: 20,
           }}
         >
           {[
             {
               icon: "🌐",
               label: "Omnichannel Presence",
-              text: "Church OS meets people wherever they are — your website, SMS, social media, and more — so no conversation falls through the cracks, regardless of the platform.",
+              text: "Church OS meets people wherever they are — your website, SMS, social media, and more — so no conversation falls through the cracks.",
             },
             {
               icon: "⚡",
               label: "Always-On Operation",
-              text: "Your church doesn't close at 5pm. Church OS responds to inquiries, answers questions, and cares for your congregation 24 hours a day, 7 days a week, without burnout.",
+              text: "Your church doesn't close at 5pm. Church OS responds 24/7, without burnout.",
             },
             {
               icon: "🛡️",
               label: "Theological Guardrails",
-              text: "Every response is anchored in your church's doctrine, your denomination's distinctives, and the truth of Scripture. Church OS doesn't freelance theology — it reflects yours.",
+              text: "Every response is anchored in your church's doctrine and the truth of Scripture. Church OS doesn't freelance theology — it reflects yours.",
             },
             {
               icon: "🧠",
               label: "Church-Specific Intelligence",
-              text: "Church OS is trained on your church — your staff, your programs, your calendar, your values. It doesn't give generic answers; it gives your answers.",
+              text: "Trained on your church — your staff, programs, calendar, values. It doesn't give generic answers; it gives your answers.",
             },
           ].map((cap, i) => (
-            <div key={i} className="card card-hover" style={{ padding: "36px 32px" }}>
-              <div style={{ fontSize: 32, marginBottom: 16 }}>{cap.icon}</div>
+            <div key={i} className="card card-hover" style={{ padding: "32px 28px" }}>
+              <div style={{ fontSize: 28, marginBottom: 14 }}>{cap.icon}</div>
               <h3
                 style={{
                   fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: 700,
                   color: "#ffffff",
-                  marginBottom: 12,
+                  marginBottom: 10,
                   letterSpacing: "0.02em",
                 }}
               >
@@ -164,7 +256,7 @@ export default function ChurchOS() {
                 style={{
                   color: "#8a9ab0",
                   fontSize: 14,
-                  lineHeight: 1.8,
+                  lineHeight: 1.75,
                   fontFamily: "var(--font-inter), Inter, sans-serif",
                 }}
               >
@@ -178,15 +270,15 @@ export default function ChurchOS() {
       <div className="section-divider" />
 
       {/* THE 10PM SCENARIO */}
-      <section style={{ padding: "0 32px 0" }}>
+      <section style={{ padding: "0 32px" }}>
         <div
           style={{
-            maxWidth: 900,
+            maxWidth: 860,
             margin: "0 auto",
             background: "#070d1a",
             border: "1px solid rgba(52,198,244,0.12)",
             borderRadius: 16,
-            padding: "64px 56px",
+            padding: "52px 48px",
             position: "relative",
             overflow: "hidden",
           }}
@@ -205,7 +297,7 @@ export default function ChurchOS() {
             }}
           />
           <span className="section-label">The 10pm Scenario</span>
-          <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             {[
               "It's 10pm on a Sunday night. A family attended your service for the first time this morning — the first time they'd stepped inside a church in years. Something stirred in them. They want to know more, but they're not ready to call anyone. So they text the number on the back of your bulletin.",
               "Within seconds, they get a warm, clear, theologically grounded response. It answers their question about what you believe. It tells them about your newcomer's lunch. It asks if there's anything else they'd like to know. And it signs off with the grace and tone of a church that actually cares.",
@@ -216,9 +308,9 @@ export default function ChurchOS() {
                 style={{
                   fontFamily: "var(--font-playfair), 'Playfair Display', serif",
                   fontStyle: "italic",
-                  fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+                  fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
                   color: i === 2 ? "#34C6F4" : "#c8d4e0",
-                  lineHeight: 1.85,
+                  lineHeight: 1.8,
                   fontWeight: i === 2 ? 600 : 400,
                 }}
               >
@@ -228,27 +320,27 @@ export default function ChurchOS() {
           </div>
           <p
             style={{
-              marginTop: 32,
+              marginTop: 28,
               fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontSize: 14,
+              fontSize: 13,
               fontWeight: 700,
               color: "#34C6F4",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}
           >
-            That's Church OS.
+            That&apos;s Church OS.
           </p>
         </div>
       </section>
 
       {/* FEATURE PILLS */}
-      <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 32px" }}>
+      <section style={{ maxWidth: 1000, margin: "0 auto", padding: "56px 32px" }}>
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: 12,
+            gap: 10,
             justifyContent: "center",
           }}
         >
@@ -273,15 +365,15 @@ export default function ChurchOS() {
       <div className="section-divider" />
 
       {/* HOW IT WORKS */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">How It Works</span>
         <h2
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 700,
             color: "#ffffff",
-            marginBottom: 64,
+            marginBottom: 52,
             maxWidth: 420,
           }}
         >
@@ -292,7 +384,7 @@ export default function ChurchOS() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 32,
+            gap: 28,
           }}
         >
           {[
@@ -322,10 +414,10 @@ export default function ChurchOS() {
               <h3
                 style={{
                   fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: 17,
+                  fontSize: 16,
                   fontWeight: 700,
                   color: "#ffffff",
-                  marginBottom: 12,
+                  marginBottom: 10,
                 }}
               >
                 {step.title}
@@ -334,7 +426,7 @@ export default function ChurchOS() {
                 style={{
                   color: "#8a9ab0",
                   fontSize: 14,
-                  lineHeight: 1.8,
+                  lineHeight: 1.75,
                   fontFamily: "var(--font-inter), Inter, sans-serif",
                 }}
               >
@@ -350,16 +442,16 @@ export default function ChurchOS() {
       {/* PILOT PROGRAM */}
       <section
         id="pilot"
-        style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}
+        style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}
       >
         <span className="section-label">Pilot Program</span>
         <h2
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 700,
             color: "#ffffff",
-            marginBottom: 24,
+            marginBottom: 20,
             maxWidth: 580,
           }}
         >
@@ -368,27 +460,25 @@ export default function ChurchOS() {
         <p
           style={{
             color: "#c8d4e0",
-            fontSize: "clamp(1rem, 1.5vw, 1.1rem)",
-            maxWidth: 680,
-            lineHeight: 1.8,
-            marginBottom: 60,
+            fontSize: "clamp(1rem, 1.5vw, 1.05rem)",
+            maxWidth: 640,
+            lineHeight: 1.75,
+            marginBottom: 48,
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We're in an early and intentional phase of growth, and we're looking
-          for the right churches to build with — not the most churches, the
-          right ones. The Church OS Pilot Program is for ministry leaders who
-          want to be part of shaping what AI-powered church communication looks
-          like at its best. Pilot churches don't just get early access — they
-          get a seat at the table.
+          We&apos;re in an early and intentional phase of growth, looking for the
+          right churches to build with — not the most churches, the right ones.
+          Pilot churches don&apos;t just get early access — they get a seat at the
+          table.
         </p>
 
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 24,
-            marginBottom: 48,
+            gap: 20,
+            marginBottom: 40,
           }}
         >
           {[
@@ -402,21 +492,21 @@ export default function ChurchOS() {
             },
             {
               title: "Shape the Roadmap",
-              text: "Your feedback doesn't go into a suggestion box. It goes into our product planning. Pilot churches help determine where Church OS goes next.",
+              text: "Your feedback doesn't go into a suggestion box. It goes into our product planning. Pilot churches determine where Church OS goes next.",
             },
             {
               title: "Priority Onboarding",
               text: "We give pilot churches our full attention — dedicated setup time, hands-on training, and direct access throughout your launch.",
             },
           ].map((b, i) => (
-            <div key={i} className="card card-hover" style={{ padding: "32px 28px" }}>
+            <div key={i} className="card card-hover" style={{ padding: "28px 24px" }}>
               <h3
                 style={{
                   fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: 700,
                   color: "#34C6F4",
-                  marginBottom: 12,
+                  marginBottom: 10,
                 }}
               >
                 {b.title}
@@ -425,7 +515,7 @@ export default function ChurchOS() {
                 style={{
                   color: "#8a9ab0",
                   fontSize: 14,
-                  lineHeight: 1.8,
+                  lineHeight: 1.75,
                   fontFamily: "var(--font-inter), Inter, sans-serif",
                 }}
               >
@@ -435,13 +525,12 @@ export default function ChurchOS() {
           ))}
         </div>
 
-        {/* Best-fit callout */}
-        <div className="callout-gold" style={{ marginBottom: 44 }}>
+        <div className="callout-gold" style={{ marginBottom: 36 }}>
           <p
             style={{
               color: "#c8d4e0",
               fontSize: 15,
-              lineHeight: 1.8,
+              lineHeight: 1.75,
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
@@ -450,8 +539,7 @@ export default function ChurchOS() {
               lead pastors, executive pastors, and church administrators
             </strong>{" "}
             who believe their congregation deserves more consistent, more
-            available, and more theologically sound communication — and who are
-            ready to build something that matters.
+            available, and more theologically sound communication.
           </p>
         </div>
 
@@ -466,7 +554,7 @@ export default function ChurchOS() {
       <section
         style={{
           textAlign: "center",
-          padding: "100px 32px",
+          padding: "80px 32px",
           position: "relative",
           overflow: "hidden",
         }}
@@ -488,11 +576,11 @@ export default function ChurchOS() {
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
             fontStyle: "italic",
-            fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+            fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
             color: "#c8d4e0",
-            maxWidth: 580,
-            margin: "0 auto 16px",
-            lineHeight: 1.7,
+            maxWidth: 540,
+            margin: "0 auto 12px",
+            lineHeight: 1.65,
           }}
         >
           You built your church to reach people.
@@ -501,11 +589,11 @@ export default function ChurchOS() {
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
             fontStyle: "italic",
-            fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+            fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
             color: "#c8d4e0",
-            maxWidth: 580,
-            margin: "0 auto 44px",
-            lineHeight: 1.7,
+            maxWidth: 540,
+            margin: "0 auto 36px",
+            lineHeight: 1.65,
           }}
         >
           We built Church OS to help you reach them further.

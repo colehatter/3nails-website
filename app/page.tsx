@@ -11,13 +11,13 @@ export default function Home() {
       <section
         style={{
           position: "relative",
-          minHeight: "92vh",
+          minHeight: "80vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          padding: "80px 32px 100px",
+          padding: "72px 32px 80px",
           overflow: "hidden",
         }}
       >
@@ -110,7 +110,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* WHO WE ARE */}
-      <section style={{ maxWidth: 800, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">Who We Are</span>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           <p
@@ -162,7 +162,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* WHAT WE BELIEVE */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">What We Believe</span>
         <h2
           style={{
@@ -224,7 +224,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* OUR PRODUCTS */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">Our Products</span>
         <h2
           style={{
@@ -409,7 +409,7 @@ export default function Home() {
       <section
         style={{
           textAlign: "center",
-          padding: "120px 32px",
+          padding: "72px 32px",
           position: "relative",
           overflow: "hidden",
         }}
