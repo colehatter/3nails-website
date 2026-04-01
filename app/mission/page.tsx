@@ -36,8 +36,7 @@ export default function Mission() {
             fontSize: "clamp(2.2rem, 5.5vw, 4rem)",
             fontWeight: 700,
             color: "#ffffff",
-            maxWidth: 640,
-            margin: "0 auto 20px",
+                        margin: "0 auto 20px",
             lineHeight: 1.1,
           }}
         >
@@ -120,8 +119,7 @@ export default function Mission() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 16,
-            maxWidth: 520,
-          }}
+                      }}
         >
           Not a product. A portfolio.
         </h2>

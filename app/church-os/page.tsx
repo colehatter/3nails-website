@@ -35,8 +35,7 @@ export default function ChurchOS() {
             fontSize: "clamp(2rem, 5vw, 3.8rem)",
             fontWeight: 700,
             color: "#ffffff",
-            maxWidth: 700,
-            margin: "0 auto 20px",
+                        margin: "0 auto 20px",
             lineHeight: 1.15,
           }}
         >
@@ -72,8 +71,7 @@ export default function ChurchOS() {
             fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 700,
             color: "#ffffff",
-            maxWidth: 600,
-            lineHeight: 1.25,
+                        lineHeight: 1.25,
             marginBottom: 40,
           }}
         >
@@ -203,8 +201,7 @@ export default function ChurchOS() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 44,
-            maxWidth: 480,
-          }}
+                      }}
         >
           Every capability your church needs.
         </h2>
@@ -374,8 +371,7 @@ export default function ChurchOS() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 52,
-            maxWidth: 420,
-          }}
+                      }}
         >
           Simple. Intentional. Built to last.
         </h2>
@@ -452,8 +448,7 @@ export default function ChurchOS() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 20,
-            maxWidth: 580,
-          }}
+                      }}
         >
           The right churches. Not the most churches.
         </h2>

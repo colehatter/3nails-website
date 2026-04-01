@@ -212,8 +212,7 @@ export default function Home() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 56,
-            maxWidth: 480,
-          }}
+                      }}
         >
           Convictions, not talking points.
         </h2>
@@ -274,8 +273,7 @@ export default function Home() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 56,
-            maxWidth: 500,
-          }}
+                      }}
         >
           Tools worthy of the mission.
         </h2>
