@@ -1,0 +1,489 @@
+import Link from "next/link";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+
+export default function Mission() {
+  return (
+    <main style={{ background: "#0d1220", minHeight: "100vh" }}>
+      <Nav />
+
+      {/* HERO */}
+      <section
+        style={{
+          position: "relative",
+          padding: "120px 32px 100px",
+          textAlign: "center",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 700,
+            height: 500,
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(52,198,244,0.09) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <span className="section-label">Our Mission</span>
+        <h1
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(2.2rem, 5.5vw, 4rem)",
+            fontWeight: 700,
+            color: "#ffffff",
+            maxWidth: 640,
+            margin: "0 auto 24px",
+            lineHeight: 1.1,
+          }}
+        >
+          Built on the Three Nails.
+        </h1>
+        <p
+          style={{
+            fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+            color: "#8a9ab0",
+            maxWidth: 620,
+            margin: "0 auto",
+            lineHeight: 1.8,
+            fontFamily: "var(--font-inter), Inter, sans-serif",
+          }}
+        >
+          We didn't name this company to be clever. We named it to be
+          accountable — to the Cross, to the Church, and to the calling we
+          believe God placed on the people who built it.
+        </p>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* WHY WE EXIST */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">Why We Exist</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            3Nails.ai was not founded because someone saw a gap in the market.
+            It was founded because a group of Christians who work in technology
+            asked a question they couldn't shake:{" "}
+            <em style={{ color: "#ffffff" }}>If not us, then who?</em>
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            The Church is the most important institution in human history. She
+            has outlasted empires, endured persecution, and carried the hope of
+            the world through every generation. She deserves tools built with
+            that weight in mind — tools built by people who actually believe
+            what she teaches, who sit in her pews, who love her enough to serve
+            her well.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            We exist to close the gap between the pace of technological change
+            and the Church's ability to steward it faithfully. That means
+            building products that are excellent enough to earn trust, honest
+            enough to deserve it, and grounded enough in Scripture to be worthy
+            of the people who use them. This is not our passion project. It is
+            our act of worship.
+          </p>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* THE 3NAILS ECOSYSTEM */}
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">The 3Nails Ecosystem</span>
+        <h2
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontWeight: 700,
+            color: "#ffffff",
+            marginBottom: 24,
+            maxWidth: 520,
+          }}
+        >
+          Not a product. A portfolio.
+        </h2>
+        <p
+          style={{
+            color: "#8a9ab0",
+            fontSize: "clamp(1rem, 1.5vw, 1.05rem)",
+            maxWidth: 680,
+            lineHeight: 1.8,
+            marginBottom: 56,
+            fontFamily: "var(--font-inter), Inter, sans-serif",
+          }}
+        >
+          We are building a portfolio of AI tools — not a single product, but a
+          layered ecosystem designed to serve the Church and the individual
+          believer across every dimension of the Christian life.
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+          {/* Church OS */}
+          <div
+            className="card"
+            style={{
+              padding: "40px 36px",
+              borderColor: "rgba(52,198,244,0.2)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 16,
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  color: "#ffffff",
+                }}
+              >
+                Church OS
+              </h3>
+              <span
+                style={{
+                  background: "rgba(52,198,244,0.15)",
+                  color: "#34C6F4",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                Live Now
+              </span>
+            </div>
+            <p
+              style={{
+                color: "#c8d4e0",
+                fontSize: 15,
+                lineHeight: 1.8,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+                maxWidth: 720,
+              }}
+            >
+              Church OS serves the local church — the pastors, administrators,
+              and ministry teams who give everything to their congregations.
+              It's an AI-powered ministry platform that extends the reach and
+              responsiveness of any church without adding headcount. It meets
+              people where they are, speaks with the church's voice, and never
+              compromises on theology. Church OS is live now and taking pilot
+              applications.
+            </p>
+          </div>
+
+          {/* Bible Navigator */}
+          <div className="card" style={{ padding: "40px 36px", opacity: 0.8 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 16,
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  color: "#ffffff",
+                }}
+              >
+                Bible Navigator
+              </h3>
+              <span
+                style={{
+                  background: "rgba(154,138,92,0.15)",
+                  color: "#9A8A5C",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
+            <p
+              style={{
+                color: "#8a9ab0",
+                fontSize: 15,
+                lineHeight: 1.8,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+                maxWidth: 720,
+              }}
+            >
+              Bible Navigator is a deeply intelligent study companion built for
+              the believer who wants to go deeper in the Word. It's not a
+              search engine with a Bible filter — it's a thoughtful guide
+              through Scripture that helps you understand context, trace themes,
+              and encounter the living God through His Word. Bible Navigator is
+              in development and coming soon.
+            </p>
+          </div>
+
+          {/* Eden */}
+          <div className="card" style={{ padding: "40px 36px", opacity: 0.8 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 16,
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  color: "#ffffff",
+                }}
+              >
+                Eden
+              </h3>
+              <span
+                style={{
+                  background: "rgba(154,138,92,0.15)",
+                  color: "#9A8A5C",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
+            <p
+              style={{
+                color: "#8a9ab0",
+                fontSize: 15,
+                lineHeight: 1.8,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+                maxWidth: 720,
+              }}
+            >
+              Eden is a personal AI built for the whole Christian life. It
+              thinks with you, walks with you, and grows with you — through
+              decisions, through hard seasons, through the daily discipline of
+              becoming more like Christ. Eden is designed not just to be useful,
+              but to be formative. It is the most personal product we're
+              building, and we're building it with great care. Coming soon.
+            </p>
+          </div>
+        </div>
+
+        {/* Flywheel statement */}
+        <div
+          style={{
+            marginTop: 48,
+            padding: "32px 36px",
+            background: "rgba(52,198,244,0.04)",
+            border: "1px solid rgba(52,198,244,0.12)",
+            borderRadius: 12,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+              fontStyle: "italic",
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              textAlign: "center",
+            }}
+          >
+            Together, these three products form a flywheel: the Church is
+            strengthened, the believer is equipped, and the community of faith
+            grows deeper, more connected, and more effective in its mission to
+            the world.
+          </p>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* THE MOMENT WE'RE IN */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">The Moment We&apos;re In</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            Something is shifting. You can feel it — in the culture, in the
+            Church, in the conversations happening in living rooms and
+            sanctuaries across the country. There is a hunger. A searching. An
+            openness that hasn't existed in decades.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            Church historians talk about Great Awakenings — those sovereign,
+            unmistakable movements of God that reshape a generation. We do not
+            claim to know the timing or the scope of what God is doing. But we
+            believe, deeply and soberly, that this is a moment that demands the
+            Church be ready.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            That means being present. Being accessible. Being equipped. It
+            means reaching the person who texts at 10pm on a Sunday, the
+            college student who has questions but doesn't know where to ask
+            them, the believer who wants to go deeper but doesn't know where to
+            start. This is the moment 3Nails was built for — not to capitalize
+            on it, but to be found faithful in it.
+          </p>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* OUR COMMITMENT */}
+      <section
+        style={{
+          maxWidth: 900,
+          margin: "0 auto",
+          padding: "100px 32px",
+        }}
+      >
+        <span className="section-label">Our Commitment</span>
+        <div
+          style={{
+            borderLeft: "3px solid rgba(154,138,92,0.5)",
+            paddingLeft: 36,
+          }}
+        >
+          <p
+            style={{
+              fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+              marginBottom: 28,
+            }}
+          >
+            We commit to building tools that serve the Church — not tools that
+            exploit her trust, dilute her theology, or treat her as a
+            demographic. We will build with excellence because the mission
+            demands it. We will build with honesty because the Gospel requires
+            it. We will remain accountable to the community we serve, open to
+            correction, and relentless in our pursuit of doing this right.
+          </p>
+          <p
+            style={{
+              fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+              fontStyle: "italic",
+              fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
+              color: "#9A8A5C",
+              lineHeight: 1.7,
+            }}
+          >
+            The three nails are our name because they are our standard. The
+            Cross cost everything. Building for the Church should cost something
+            too.
+          </p>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* FINAL CTA */}
+      <section
+        style={{
+          textAlign: "center",
+          padding: "120px 32px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 600,
+            height: 400,
+            background:
+              "radial-gradient(ellipse, rgba(52,198,244,0.07) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <h2
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#ffffff",
+            marginBottom: 44,
+          }}
+        >
+          Walk with us.
+        </h2>
+        <Link href="/church-os" className="btn-primary-lg">
+          Explore Our Products
+        </Link>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}

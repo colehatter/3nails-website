@@ -1,1147 +1,463 @@
-"use client";
+import Link from "next/link";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
-import Logo from "./components/Logo";
-import GlowingCross from "./components/GlowingCross";
-import StatCounter from "./components/StatCounter";
-import SectionReveal from "./components/SectionReveal";
-
-// ─── NAV ─────────────────────────────────────────────────────────────────────
-
-function Nav() {
+export default function Home() {
   return (
-    <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        background: "rgba(13,18,32,0.88)",
-        backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(52,198,244,0.08)",
-      }}
-    >
-      <div
+    <main style={{ background: "#0d1220", minHeight: "100vh" }}>
+      <Nav />
+
+      {/* HERO */}
+      <section
         style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 32px",
-          height: 68,
+          position: "relative",
+          minHeight: "92vh",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "80px 32px 100px",
+          overflow: "hidden",
         }}
       >
-        <Logo size="sm" />
-        <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
-          <a
-            href="#church-os"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("church-os")?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Church OS
-          </a>
-          <a
-            href="#pilot"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("pilot")?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Book a Pilot
-          </a>
-          <a href="mailto:cole@3nails.ai" className="btn-outline" style={{ padding: "9px 22px", fontSize: 13 }}>
-            Book a Pilot Conversation
-          </a>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-// ─── HERO ─────────────────────────────────────────────────────────────────────
-
-function Hero() {
-  return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        padding: "120px 32px 80px",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Radial ambient */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "radial-gradient(ellipse at 50% 30%, rgba(52,198,244,0.09) 0%, transparent 65%)",
-          pointerEvents: "none",
-        }}
-      />
-
-      <SectionReveal>
-        <Logo size="lg" />
-      </SectionReveal>
-
-      <SectionReveal delay={100}>
-        <h1
-          className="font-playfair"
+        {/* Radial glow behind */}
+        <div
           style={{
-            fontSize: "clamp(2.2rem, 5vw, 3.75rem)",
-            fontWeight: 700,
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "700px",
+            height: "500px",
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(52,198,244,0.10) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* Cross */}
+        <div className="cross-glow-pulse" style={{ marginBottom: 36 }}>
+          <svg
+            width="64"
+            height="72"
+            viewBox="0 0 64 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="28" y="0" width="8" height="72" fill="white" rx="2" />
+            <rect x="4" y="22" width="56" height="8" fill="white" rx="2" />
+          </svg>
+        </div>
+
+        {/* Logo / Brand */}
+        <div
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(3rem, 8vw, 6.5rem)",
+            fontWeight: 900,
             color: "#ffffff",
-            lineHeight: 1.2,
-            maxWidth: 820,
-            margin: "40px auto 0",
-            letterSpacing: "-0.01em",
+            letterSpacing: "0.02em",
+            lineHeight: 1,
+            marginBottom: 20,
           }}
         >
-          Building the AI Infrastructure for the Next Era of the Church
-        </h1>
-      </SectionReveal>
+          3Nails.ai
+        </div>
 
-      <SectionReveal delay={200}>
+        {/* Tagline */}
+        <h1
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontStyle: "italic",
+            fontSize: "clamp(1.3rem, 3vw, 2rem)",
+            fontWeight: 400,
+            color: "#c8d4e0",
+            marginBottom: 28,
+            maxWidth: 540,
+          }}
+        >
+          AI Built on the Foundation That Holds.
+        </h1>
+
+        {/* Subheadline */}
         <p
           style={{
-            fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
-            color: "#c8d4e0",
-            maxWidth: 620,
-            margin: "24px auto 0",
-            lineHeight: 1.7,
-            fontFamily: "Inter, sans-serif",
+            fontSize: "clamp(1rem, 2vw, 1.15rem)",
+            color: "#8a9ab0",
+            maxWidth: 560,
+            lineHeight: 1.75,
+            marginBottom: 44,
+            fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          Putting AI in the hands of the Church to reach further, respond faster, and disciple deeper.
+          3Nails.ai is a Christian technology company creating AI tools for the
+          Church and the believer. We exist not because the market demanded it
+          — but because we were called to it.
         </p>
-      </SectionReveal>
 
-      <SectionReveal delay={300}>
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            justifyContent: "center",
-            marginTop: 48,
-            flexWrap: "wrap",
-          }}
-        >
-          <a href="mailto:cole@3nails.ai" className="btn-primary">
-            Book a Pilot Conversation
-          </a>
-          <a
-            href="#church-os"
-            className="btn-outline"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("church-os")?.scrollIntoView({ behavior: "smooth" });
+        {/* CTAs */}
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+          <Link href="/church-os" className="btn-primary-lg">
+            Explore Our Work
+          </Link>
+          <Link href="/mission" className="btn-outline" style={{ padding: "18px 48px", fontSize: 17 }}>
+            Learn Who We Are
+          </Link>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* WHO WE ARE */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">Who We Are</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            See Church OS
-          </a>
+            We are a team of Christians building technology — not despite our
+            faith, but because of it. 3Nails.ai exists to create AI tools that
+            the Church can trust, use, and stand behind. Our name comes from the
+            three nails of the crucifixion. That's not branding. That's our
+            foundation.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            The Church deserves better than tools built by people who don't
+            understand her. Pastors shouldn't have to wonder whether the AI
+            answering their congregation's questions aligns with Scripture.
+            Believers shouldn't have to settle for generic tools that treat
+            their faith as a filter, not a foundation. We're here to change
+            that — one product at a time.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.85,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            This is not a market play. This is obedience. We believe God is
+            moving in this cultural moment, and that Christians in technology
+            have a responsibility to show up — faithfully, excellently, and
+            without compromise. That's the conviction 3Nails was founded on,
+            and it's what drives every line of code we write.
+          </p>
         </div>
-      </SectionReveal>
+      </section>
 
-      <SectionReveal delay={400}>
-        <div className="cross-glow-pulse" style={{ marginTop: 24 }}>
-          <GlowingCross />
-        </div>
-      </SectionReveal>
-    </section>
-  );
-}
+      <div className="section-divider" />
 
-// ─── WHY NOW ─────────────────────────────────────────────────────────────────
-
-function WhyNow() {
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        maxWidth: 1200,
-        margin: "0 auto",
-      }}
-    >
-      <div className="section-divider" style={{ marginBottom: 80 }} />
-
-      <SectionReveal>
-        <span className="section-label">The Moment</span>
+      {/* WHAT WE BELIEVE */}
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">What We Believe</span>
         <h2
-          className="font-playfair"
           style={{
-            fontSize: "clamp(1.9rem, 4vw, 3rem)",
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
             fontWeight: 700,
             color: "#ffffff",
-            maxWidth: 700,
-            lineHeight: 1.25,
-            marginBottom: 64,
+            marginBottom: 56,
+            maxWidth: 480,
           }}
         >
-          Faith Is Not Declining — It&apos;s Shifting, and Growing Digitally
+          Convictions, not talking points.
         </h2>
-      </SectionReveal>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: 24,
-          marginBottom: 48,
-        }}
-      >
-        {[
-          { value: "19M+", label: "Bible units sold in 2025 — doubled vs. 2019" },
-          { value: "10M+", label: "New Bible users in a single year" },
-          { value: "62%", label: "of U.S. identifies as Christian" },
-          { value: "57%", label: "rarely or never attend church" },
-        ].map((stat, i) => (
-          <SectionReveal key={i} delay={i * 80}>
-            <div className="card card-hover" style={{ padding: "36px 28px", textAlign: "center" }}>
-              <div
-                className="font-playfair"
-                style={{
-                  fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
-                  fontWeight: 700,
-                  color: "#34C6F4",
-                  textShadow: "0 0 20px rgba(52,198,244,0.4)",
-                  lineHeight: 1,
-                  marginBottom: 14,
-                }}
-              >
-                {stat.value}
-              </div>
-              <div style={{ color: "#8a9ab0", fontSize: 14, lineHeight: 1.5 }}>{stat.label}</div>
-            </div>
-          </SectionReveal>
-        ))}
-      </div>
-
-      <SectionReveal delay={350}>
-        <div
-          style={{
-            background: "rgba(52,198,244,0.06)",
-            border: "1px solid rgba(52,198,244,0.2)",
-            borderRadius: 10,
-            padding: "28px 36px",
-            textAlign: "center",
-            fontFamily: "Playfair Display, serif",
-            fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-            fontStyle: "italic",
-            color: "#ffffff",
-            fontWeight: 600,
-          }}
-        >
-          Demand is rising. The infrastructure does not exist yet.
-        </div>
-      </SectionReveal>
-    </section>
-  );
-}
-
-// ─── THE PROBLEM ──────────────────────────────────────────────────────────────
-
-function TheProblem() {
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        background: "rgba(14,20,32,0.5)",
-      }}
-    >
-      <div style={{ maxWidth: 900, margin: "0 auto" }}>
-        <SectionReveal>
-          <span className="section-label">The Gap</span>
-          <h2
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.9rem, 4vw, 3rem)",
-              fontWeight: 700,
-              color: "#ffffff",
-              lineHeight: 1.25,
-              marginBottom: 48,
-            }}
-          >
-            People Are Already Looking. The Church Isn&apos;t Where They&apos;re Looking.
-          </h2>
-        </SectionReveal>
-
-        <SectionReveal delay={100}>
-          <div className="callout-gold" style={{ marginBottom: 48 }}>
-            <p
-              className="font-playfair"
-              style={{
-                fontSize: "clamp(1.1rem, 2.2vw, 1.45rem)",
-                fontStyle: "italic",
-                color: "#ffffff",
-                lineHeight: 1.6,
-                margin: 0,
-              }}
-            >
-              57% of Americans who identify as Christian rarely or never attend church. That&apos;s not a faith problem.
-              That&apos;s an infrastructure problem.
-            </p>
-          </div>
-        </SectionReveal>
-
-        <SectionReveal delay={200}>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 20 }}>
-            {[
-              "People seek answers on their phones, not in buildings",
-              "Churches struggle with engagement, discipleship, and follow-up at scale",
-              "The largest faith market lacks a modern infrastructure layer to connect the two",
-            ].map((item, i) => (
-              <li
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: 16,
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(0.95rem, 1.8vw, 1.05rem)",
-                  color: "#c8d4e0",
-                  lineHeight: 1.6,
-                }}
-              >
-                <span style={{ color: "#34C6F4", fontSize: 20, lineHeight: 1, marginTop: 2, flexShrink: 0 }}>›</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </SectionReveal>
-      </div>
-    </section>
-  );
-}
-
-// ─── THE OPPORTUNITY ──────────────────────────────────────────────────────────
-
-function TheOpportunity() {
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        maxWidth: 1200,
-        margin: "0 auto",
-      }}
-    >
-      <div className="section-divider" style={{ marginBottom: 80 }} />
-
-      <SectionReveal>
-        <span className="section-label">The Opportunity</span>
-        <h2
-          className="font-playfair"
-          style={{
-            fontSize: "clamp(1.9rem, 4vw, 3rem)",
-            fontWeight: 700,
-            color: "#ffffff",
-            maxWidth: 780,
-            lineHeight: 1.25,
-            marginBottom: 64,
-          }}
-        >
-          Faith and Mobile Are Already Intertwined — The Infrastructure Layer Is Wide Open
-        </h2>
-      </SectionReveal>
-
-      {/* Top stats */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: 24,
-          marginBottom: 64,
-        }}
-      >
-        {[
-          { value: "2B+", label: "Christians globally" },
-          { value: "#1", label: "daily mobile usage category: faith" },
-          { value: "79.5%", label: "increase in faith-based app downloads since 2019" },
-        ].map((stat, i) => (
-          <SectionReveal key={i} delay={i * 80}>
-            <StatCounter value={stat.value} label={stat.label} />
-          </SectionReveal>
-        ))}
-      </div>
-
-      {/* Proof cards */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: 20,
-          marginBottom: 48,
-        }}
-      >
-        {[
-          {
-            name: "Bible Chat",
-            metric: "25M+ users",
-            proof: "proving AI + faith = real scale",
-          },
-          {
-            name: "Hallow",
-            metric: "22M+ downloads, $100M+ raised",
-            proof: "faith consumers are here",
-          },
-          {
-            name: "YouVersion",
-            metric: "~1B installs",
-            proof: "digital faith engagement is massive",
-          },
-        ].map((card, i) => (
-          <SectionReveal key={i} delay={i * 80}>
-            <div className="card card-hover" style={{ padding: "28px 24px" }}>
-              <div
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "#8a9ab0",
-                  marginBottom: 10,
-                }}
-              >
-                Proof of Demand
-              </div>
-              <div
-                className="font-playfair"
-                style={{ fontSize: "1.35rem", fontWeight: 700, color: "#ffffff", marginBottom: 6 }}
-              >
-                {card.name}
-              </div>
-              <div style={{ color: "#34C6F4", fontWeight: 600, fontSize: "0.95rem", marginBottom: 8 }}>
-                {card.metric}
-              </div>
-              <div style={{ color: "#8a9ab0", fontSize: "0.9rem" }}>{card.proof}</div>
-            </div>
-          </SectionReveal>
-        ))}
-      </div>
-
-      <SectionReveal delay={280}>
-        <div
-          style={{
-            background: "rgba(52,198,244,0.06)",
-            border: "1px solid rgba(52,198,244,0.2)",
-            borderRadius: 10,
-            padding: "24px 32px",
-            textAlign: "center",
-            fontFamily: "Inter, sans-serif",
-            fontSize: "1rem",
-            fontWeight: 600,
-            color: "#c8d4e0",
-            fontStyle: "italic",
-          }}
-        >
-          Demand is proven. No dominant infrastructure layer exists for the Church itself.
-        </div>
-      </SectionReveal>
-    </section>
-  );
-}
-
-// ─── THE 3NAILS ECOSYSTEM ─────────────────────────────────────────────────────
-
-function TheEcosystem() {
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        background: "rgba(14,20,32,0.5)",
-      }}
-    >
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <SectionReveal>
-          <span className="section-label">The System</span>
-          <h2
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.9rem, 4vw, 3rem)",
-              fontWeight: 700,
-              color: "#ffffff",
-              lineHeight: 1.25,
-              marginBottom: 64,
-            }}
-          >
-            Not Multiple Products. One System. One Flywheel.
-          </h2>
-        </SectionReveal>
 
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             gap: 24,
-            marginBottom: 56,
           }}
         >
           {[
             {
-              tag: "B2B",
-              name: "Church OS",
-              desc: "AI operating system that churches run on",
-              icon: "⛪",
+              label: "About the Church",
+              text: "The Church is not an institution in decline — she is a body on the eve of her greatest hour. We build for her accordingly.",
             },
             {
-              tag: "B2C",
-              name: "Bible Navigator",
-              desc: "Mass engagement layer for individuals",
-              icon: "📖",
+              label: "About Technology",
+              text: "Technology is morally neutral, but it is never spiritually neutral in practice. Who builds it, and why, shapes what it does to the people who use it.",
             },
             {
-              tag: "Platform",
-              name: "Eden",
-              desc: "Personal intelligence layer, proactive guidance",
-              icon: "✦",
+              label: "About This Moment in History",
+              text: "We are living through one of the most significant technological shifts in human history. The Church cannot afford to be an afterthought in that conversation.",
             },
-          ].map((product, i) => (
-            <SectionReveal key={i} delay={i * 100}>
-              <div
-                className="card card-hover"
-                style={{ padding: "36px 28px", position: "relative", overflow: "hidden" }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 16,
-                    right: 16,
-                    fontSize: 11,
-                    fontWeight: 700,
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    color: "#34C6F4",
-                    background: "rgba(52,198,244,0.08)",
-                    border: "1px solid rgba(52,198,244,0.2)",
-                    padding: "3px 10px",
-                    borderRadius: 999,
-                  }}
-                >
-                  {product.tag}
-                </div>
-                <div style={{ fontSize: 28, marginBottom: 14 }}>{product.icon}</div>
-                <div
-                  className="font-playfair"
-                  style={{ fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: 10 }}
-                >
-                  {product.name}
-                </div>
-                <div style={{ color: "#c8d4e0", fontSize: "0.95rem", lineHeight: 1.6 }}>{product.desc}</div>
-              </div>
-            </SectionReveal>
-          ))}
-        </div>
-
-        {/* Flywheel strip */}
-        <SectionReveal delay={320}>
-          <div
-            style={{
-              background: "rgba(52,198,244,0.05)",
-              border: "1px solid rgba(52,198,244,0.15)",
-              borderRadius: 10,
-              padding: "24px 32px",
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 8,
-              marginBottom: 40,
-            }}
-          >
-            {["Churches", "Users", "Data", "Intelligence", "Better Products", "More Churches"].map(
-              (item, i, arr) => (
-                <span key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span
-                    style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontSize: 12,
-                      fontWeight: 700,
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      color: i === 0 || i === arr.length - 1 ? "#34C6F4" : "#c8d4e0",
-                    }}
-                  >
-                    {item}
-                  </span>
-                  {i < arr.length - 1 && (
-                    <span style={{ color: "#34C6F4", opacity: 0.5, fontSize: 14 }}>→</span>
-                  )}
-                </span>
-              )
-            )}
-          </div>
-        </SectionReveal>
-
-        <SectionReveal delay={400}>
-          <p
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
-              fontStyle: "italic",
-              color: "#8a9ab0",
-              textAlign: "center",
-              margin: 0,
-            }}
-          >
-            3Nails is not building an app. It&apos;s building the operating system the Church runs on.
-          </p>
-        </SectionReveal>
-      </div>
-    </section>
-  );
-}
-
-// ─── CHURCH OS ────────────────────────────────────────────────────────────────
-
-function ChurchOS() {
-  const featurePills = [
-    "Web", "Mobile", "SMS", "Email", "App", "24/7 Availability",
-    "Answers Questions", "Guides Next Steps", "Captures Engagement"
-  ];
-
-  return (
-    <section
-      id="church-os"
-      style={{
-        padding: "120px 32px",
-        maxWidth: 1100,
-        margin: "0 auto",
-      }}
-    >
-      <div className="section-divider" style={{ marginBottom: 80 }} />
-
-      <SectionReveal>
-        <span className="section-label">Church OS</span>
-        <h2
-          className="font-playfair"
-          style={{
-            fontSize: "clamp(1.9rem, 4vw, 3rem)",
-            fontWeight: 700,
-            color: "#ffffff",
-            lineHeight: 1.25,
-            marginBottom: 48,
-          }}
-        >
-          The AI Operating System Every Church Needs
-        </h2>
-      </SectionReveal>
-
-      {/* Use-case band */}
-      <SectionReveal delay={100}>
-        <div
-          style={{
-            background: "#080d18",
-            border: "1px solid rgba(255,255,255,0.06)",
-            borderRadius: 12,
-            padding: "40px 44px",
-            marginBottom: 48,
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 2,
-              background: "linear-gradient(90deg, transparent, rgba(52,198,244,0.5), transparent)",
-            }}
-          />
-          <p
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.1rem, 2.2vw, 1.4rem)",
-              fontStyle: "italic",
-              color: "#c8d4e0",
-              lineHeight: 1.75,
-              margin: 0,
-            }}
-          >
-            A first-time visitor texts your church at 10pm on a Sunday night. Within seconds, they receive service
-            times, a sermon clip, next steps to get connected, and a personal follow-up scheduled for Monday morning.{" "}
-            <strong style={{ color: "#ffffff" }}>No staff. No delay. No one left behind.</strong>
-          </p>
-        </div>
-      </SectionReveal>
-
-      {/* Feature pills */}
-      <SectionReveal delay={180}>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 56 }}>
-          {featurePills.map((pill, i) => (
-            <span key={i} className="feature-pill">{pill}</span>
-          ))}
-        </div>
-      </SectionReveal>
-
-      {/* Trust pillars */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: 20,
-          marginBottom: 40,
-        }}
-      >
-        {[
-          {
-            title: "Scripture-First",
-            desc: "Theologically grounded, doctrinally aligned to your church",
-            icon: "✝",
-          },
-          {
-            title: "Church Intelligence",
-            desc: "Trained on your sermons, culture, and voice — not generic AI",
-            icon: "◈",
-          },
-          {
-            title: "Unified Channels",
-            desc: "One system across every touchpoint your congregation uses",
-            icon: "⬡",
-          },
-        ].map((pillar, i) => (
-          <SectionReveal key={i} delay={i * 80 + 240}>
-            <div className="card card-hover" style={{ padding: "32px 24px" }}>
-              <div
+            {
+              label: "About Our Responsibility",
+              text: "Christians in technology are stewards, not spectators. We are accountable for what we build — and for what we choose not to build.",
+            },
+          ].map((belief, i) => (
+            <div key={i} className="card card-hover" style={{ padding: "36px 32px" }}>
+              <span className="section-label" style={{ marginBottom: 14 }}>
+                {belief.label}
+              </span>
+              <p
                 style={{
-                  fontSize: 22,
-                  color: "#34C6F4",
-                  marginBottom: 14,
-                  fontFamily: "Inter, sans-serif",
+                  color: "#c8d4e0",
+                  fontSize: 15,
+                  lineHeight: 1.8,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
                 }}
               >
-                {pillar.icon}
-              </div>
-              <div
-                className="font-playfair"
-                style={{ fontSize: "1.15rem", fontWeight: 700, color: "#ffffff", marginBottom: 10 }}
-              >
-                {pillar.title}
-              </div>
-              <div style={{ color: "#c8d4e0", fontSize: "0.9rem", lineHeight: 1.6 }}>{pillar.desc}</div>
+                {belief.text}
+              </p>
             </div>
-          </SectionReveal>
-        ))}
-      </div>
-
-      <SectionReveal delay={440}>
-        <div className="outcome-bar">
-          More engagement. &nbsp;·&nbsp; Less staff burden. &nbsp;·&nbsp; Scalable discipleship.
+          ))}
         </div>
-      </SectionReveal>
-    </section>
-  );
-}
+      </section>
 
-// ─── HOW IT WORKS ─────────────────────────────────────────────────────────────
+      <div className="section-divider" />
 
-function HowItWorks() {
-  const steps = [
-    { n: "01", title: "Alignment", desc: "We learn your church's theology, culture, voice, and goals" },
-    { n: "02", title: "Setup", desc: "We configure Church OS across your channels and integrate your systems" },
-    { n: "03", title: "Training", desc: "We train the AI on your sermons, FAQs, and pastoral guidelines" },
-    { n: "04", title: "Launch", desc: "Your church goes live with a branded AI that works 24/7" },
-  ];
-
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        background: "rgba(14,20,32,0.5)",
-      }}
-    >
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <SectionReveal>
-          <span className="section-label">The Process</span>
-          <h2
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.9rem, 4vw, 3rem)",
-              fontWeight: 700,
-              color: "#ffffff",
-              lineHeight: 1.25,
-              marginBottom: 72,
-            }}
-          >
-            From First Conversation to Live in Weeks
-          </h2>
-        </SectionReveal>
+      {/* OUR PRODUCTS */}
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px" }}>
+        <span className="section-label">Our Products</span>
+        <h2
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontWeight: 700,
+            color: "#ffffff",
+            marginBottom: 56,
+            maxWidth: 500,
+          }}
+        >
+          Tools worthy of the mission.
+        </h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 1,
-            background: "rgba(52,198,244,0.08)",
-            borderRadius: 12,
-            overflow: "hidden",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: 24,
+            marginBottom: 48,
           }}
         >
-          {steps.map((step, i) => (
-            <SectionReveal key={i} delay={i * 80}>
-              <div
+          {/* Church OS */}
+          <div className="card card-hover" style={{ padding: "40px 32px" }}>
+            <div style={{ marginBottom: 16 }}>
+              <span
                 style={{
-                  background: "#0d1220",
-                  padding: "44px 32px",
-                  height: "100%",
+                  background: "rgba(52,198,244,0.15)",
+                  color: "#34C6F4",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
                 }}
               >
-                <div className="step-number">{step.n}</div>
-                <div
-                  className="font-playfair"
-                  style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: 12 }}
-                >
-                  {step.title}
-                </div>
-                <div style={{ color: "#8a9ab0", fontSize: "0.92rem", lineHeight: 1.65 }}>{step.desc}</div>
-              </div>
-            </SectionReveal>
-          ))}
+                Live Now
+              </span>
+            </div>
+            <h3
+              style={{
+                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                fontSize: 22,
+                fontWeight: 700,
+                color: "#ffffff",
+                marginBottom: 14,
+              }}
+            >
+              Church OS
+            </h3>
+            <p
+              style={{
+                color: "#8a9ab0",
+                fontSize: 14,
+                lineHeight: 1.75,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+              }}
+            >
+              An AI-powered platform that gives every church an always-on,
+              theologically grounded presence across every channel their
+              congregation uses.
+            </p>
+          </div>
+
+          {/* Bible Navigator */}
+          <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
+            <div style={{ marginBottom: 16 }}>
+              <span
+                style={{
+                  background: "rgba(154,138,92,0.15)",
+                  color: "#9A8A5C",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
+            <h3
+              style={{
+                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                fontSize: 22,
+                fontWeight: 700,
+                color: "#ffffff",
+                marginBottom: 14,
+              }}
+            >
+              Bible Navigator
+            </h3>
+            <p
+              style={{
+                color: "#8a9ab0",
+                fontSize: 14,
+                lineHeight: 1.75,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+              }}
+            >
+              A deeply intelligent Bible study companion that helps believers
+              read, understand, and live the Word.
+            </p>
+          </div>
+
+          {/* Eden */}
+          <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
+            <div style={{ marginBottom: 16 }}>
+              <span
+                style={{
+                  background: "rgba(154,138,92,0.15)",
+                  color: "#9A8A5C",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
+            <h3
+              style={{
+                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                fontSize: 22,
+                fontWeight: 700,
+                color: "#ffffff",
+                marginBottom: 14,
+              }}
+            >
+              Eden
+            </h3>
+            <p
+              style={{
+                color: "#8a9ab0",
+                fontSize: 14,
+                lineHeight: 1.75,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+              }}
+            >
+              A personal AI built for the Christian life, designed to think
+              with you, pray with you, and grow with you.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
 
-// ─── PILOT PROGRAM ───────────────────────────────────────────────────────────
-
-function PilotProgram() {
-  return (
-    <section
-      id="pilot"
-      style={{
-        padding: "120px 32px",
-        maxWidth: 1100,
-        margin: "0 auto",
-      }}
-    >
-      <div className="section-divider" style={{ marginBottom: 80 }} />
-
-      <SectionReveal>
-        <span className="section-label">Pilot Program</span>
-        <h2
-          className="font-playfair"
+        <p
           style={{
-            fontSize: "clamp(1.9rem, 4vw, 3rem)",
+            color: "#8a9ab0",
+            fontSize: 14,
+            fontFamily: "var(--font-inter), Inter, sans-serif",
+            marginBottom: 20,
+          }}
+        >
+          Each product is built on the same conviction: that the people of God
+          deserve tools worthy of the mission they've been given.
+        </p>
+        <Link
+          href="/church-os"
+          style={{
+            color: "#34C6F4",
+            textDecoration: "none",
+            fontFamily: "var(--font-inter), Inter, sans-serif",
+            fontSize: 15,
+            fontWeight: 600,
+          }}
+        >
+          Explore our work →
+        </Link>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* CLOSING CTA */}
+      <section
+        style={{
+          textAlign: "center",
+          padding: "120px 32px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 600,
+            height: 400,
+            background:
+              "radial-gradient(ellipse, rgba(52,198,244,0.07) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <h2
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
             fontWeight: 700,
+            fontStyle: "italic",
             color: "#ffffff",
-            lineHeight: 1.25,
             marginBottom: 24,
           }}
         >
-          We&apos;re Selecting a Limited Number of Pilot Churches
+          This is just the beginning.
         </h2>
         <p
           style={{
-            color: "#c8d4e0",
-            fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)",
-            maxWidth: 680,
-            lineHeight: 1.75,
-            marginBottom: 64,
+            color: "#8a9ab0",
+            fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+            maxWidth: 500,
+            margin: "0 auto 44px",
+            lineHeight: 1.8,
+            fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We&apos;re not launching to everyone. We&apos;re going deep with a small group of forward-thinking churches
-          who want to be part of building something that will serve the Church for generations.
-        </p>
-      </SectionReveal>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: 20,
-          marginBottom: 48,
-        }}
-      >
-        {[
-          {
-            title: "Early Access",
-            desc: "Be among the first churches running Church OS before public launch",
-            icon: "◎",
-          },
-          {
-            title: "Founder Involvement",
-            desc: "Direct access to the 3Nails founding team throughout onboarding",
-            icon: "◈",
-          },
-          {
-            title: "Shape the Roadmap",
-            desc: "Your feedback directly influences what gets built next",
-            icon: "⬡",
-          },
-          {
-            title: "Priority Onboarding",
-            desc: "White-glove setup, training, and launch support",
-            icon: "✦",
-          },
-        ].map((benefit, i) => (
-          <SectionReveal key={i} delay={i * 80}>
-            <div className="card card-hover" style={{ padding: "32px 24px" }}>
-              <div
-                style={{
-                  fontSize: 20,
-                  color: "#34C6F4",
-                  marginBottom: 14,
-                }}
-              >
-                {benefit.icon}
-              </div>
-              <div
-                className="font-playfair"
-                style={{ fontSize: "1.1rem", fontWeight: 700, color: "#ffffff", marginBottom: 10 }}
-              >
-                {benefit.title}
-              </div>
-              <div style={{ color: "#8a9ab0", fontSize: "0.9rem", lineHeight: 1.6 }}>{benefit.desc}</div>
-            </div>
-          </SectionReveal>
-        ))}
-      </div>
-
-      <SectionReveal delay={360}>
-        <div
-          className="callout-gold"
-          style={{ marginBottom: 40, display: "inline-block", width: "100%" }}
-        >
-          <p
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: "0.95rem",
-              fontWeight: 600,
-              color: "#F5A623",
-              margin: 0,
-              textAlign: "center",
-            }}
-          >
-            Best fit: Churches with 1,000–10,000 members ready to lead in the AI era.
-          </p>
-        </div>
-      </SectionReveal>
-
-      <SectionReveal delay={420}>
-        <div style={{ textAlign: "center" }}>
-          <a href="mailto:cole@3nails.ai" className="btn-primary">
-            Apply for a Pilot Conversation
-          </a>
-        </div>
-      </SectionReveal>
-    </section>
-  );
-}
-
-// ─── WHY 3NAILS ───────────────────────────────────────────────────────────────
-
-function Why3Nails() {
-  const statements = [
-    "The attention is already on the phone.",
-    "The demand is already proven.",
-    "The technology is already here.",
-    "This must be built by people who understand the mission.",
-  ];
-
-  return (
-    <section
-      style={{
-        padding: "120px 32px",
-        background: "rgba(14,20,32,0.5)",
-      }}
-    >
-      <div style={{ maxWidth: 900, margin: "0 auto" }}>
-        <SectionReveal>
-          <span className="section-label">Why 3Nails</span>
-          <h2
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.9rem, 4vw, 3rem)",
-              fontWeight: 700,
-              color: "#ffffff",
-              lineHeight: 1.25,
-              marginBottom: 64,
-            }}
-          >
-            Who Builds What the Church Trusts?
-          </h2>
-        </SectionReveal>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 28, marginBottom: 64 }}>
-          {statements.map((line, i) => (
-            <SectionReveal key={i} delay={i * 100}>
-              <p className="why-line">{line}</p>
-            </SectionReveal>
-          ))}
-        </div>
-
-        <SectionReveal delay={440}>
-          <p
-            className="font-playfair"
-            style={{
-              fontSize: "clamp(1.3rem, 3vw, 2rem)",
-              fontWeight: 700,
-              color: "#F5A623",
-              fontStyle: "italic",
-              textAlign: "center",
-              marginTop: 16,
-            }}
-          >
-            The mission is eternal. The technology is now.
-          </p>
-        </SectionReveal>
-      </div>
-    </section>
-  );
-}
-
-// ─── FINAL CTA ───────────────────────────────────────────────────────────────
-
-function FinalCTA() {
-  return (
-    <section
-      style={{
-        padding: "140px 32px",
-        textAlign: "center",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "radial-gradient(ellipse at 50% 50%, rgba(52,198,244,0.08) 0%, transparent 65%)",
-          pointerEvents: "none",
-        }}
-      />
-      <SectionReveal>
-        <h2
-          className="font-playfair"
-          style={{
-            fontSize: "clamp(2rem, 5vw, 3.5rem)",
-            fontWeight: 700,
-            color: "#ffffff",
-            marginBottom: 20,
-            lineHeight: 1.2,
-          }}
-        >
-          Ready to Bring AI to Your Church?
-        </h2>
-        <p
-          style={{
-            color: "#c8d4e0",
-            fontSize: "clamp(1rem, 2vw, 1.2rem)",
-            maxWidth: 560,
-            margin: "0 auto 48px",
-            lineHeight: 1.7,
-          }}
-        >
-          Join a small group of forward-thinking churches building the future of ministry.
+          We're building a suite of AI tools for the Church and the believer —
+          rooted in Scripture, built with excellence, and offered in service.
         </p>
         <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
-          Book a Pilot Conversation
+          Join the Mission
         </a>
-        <p
-          style={{
-            color: "#8a9ab0",
-            fontSize: 13,
-            marginTop: 28,
-            fontStyle: "italic",
-          }}
-        >
-          We exist to serve the Christian community with AI tools they can trust.
-        </p>
-      </SectionReveal>
-    </section>
-  );
-}
+      </section>
 
-// ─── FOOTER ──────────────────────────────────────────────────────────────────
-
-function Footer() {
-  return (
-    <footer
-      style={{
-        borderTop: "1px solid rgba(52,198,244,0.1)",
-        padding: "48px 32px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: 20,
-          textAlign: "center",
-        }}
-      >
-        <Logo size="sm" />
-        <p
-          style={{
-            color: "#8a9ab0",
-            fontSize: 13,
-            fontStyle: "italic",
-            fontFamily: "Playfair Display, serif",
-            margin: 0,
-          }}
-        >
-          Building the AI Infrastructure for the Next Era of the Church
-        </p>
-        <a
-          href="mailto:cole@3nails.ai"
-          style={{
-            color: "#34C6F4",
-            fontSize: 14,
-            textDecoration: "none",
-            fontFamily: "Inter, sans-serif",
-          }}
-        >
-          cole@3nails.ai
-        </a>
-        <p
-          style={{
-            color: "#4a5568",
-            fontSize: 12,
-            fontFamily: "Inter, sans-serif",
-            margin: 0,
-          }}
-        >
-          © 2026 3Nails.ai
-        </p>
-      </div>
-    </footer>
-  );
-}
-
-// ─── PAGE ─────────────────────────────────────────────────────────────────────
-
-export default function Home() {
-  return (
-    <>
-      <Nav />
-      <main>
-        <Hero />
-        <WhyNow />
-        <TheProblem />
-        <TheOpportunity />
-        <TheEcosystem />
-        <ChurchOS />
-        <HowItWorks />
-        <PilotProgram />
-        <Why3Nails />
-        <FinalCTA />
-      </main>
       <Footer />
-    </>
+    </main>
   );
 }
