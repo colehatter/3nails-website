@@ -21,7 +21,6 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        {/* Radial glow behind */}
         <div
           style={{
             position: "absolute",
@@ -92,8 +91,8 @@ export default function Home() {
           }}
         >
           3Nails.ai is a Christian technology company creating AI tools for the
-          Church and the believer. We exist not because the market demanded it
-          — but because we were called to it.
+          Church and the believer. We exist not because the market demanded it,
+          but because we were called to it.
         </p>
 
         {/* CTAs */}
@@ -135,7 +134,7 @@ export default function Home() {
             We believe pastors and church leaders shouldn&apos;t have to rely on
             generic AI systems that weren&apos;t designed with Scripture, theology,
             or the local church in mind. Our mission is simple: create tools you
-            can trust — tools that serve your ministry, respect your doctrine,
+            can trust, tools that serve your ministry, respect your doctrine,
             and support your people well.
           </p>
           <p
@@ -147,7 +146,7 @@ export default function Home() {
             }}
           >
             Our name comes from the three nails of the crucifixion. It&apos;s not
-            branding — it&apos;s our foundation. Everything we build is shaped by a
+            branding, it&apos;s our foundation. Everything we build is shaped by a
             commitment to biblical truth, theological integrity, and real-world
             usefulness for the Church.
           </p>
@@ -160,7 +159,7 @@ export default function Home() {
             }}
           >
             We exist to strengthen and extend the work already happening in the
-            Church — helping pastors lead, equipping teams to respond, and
+            Church, helping pastors lead, equipping teams to respond, and
             serving people with clarity and care.
           </p>
           <p
@@ -184,7 +183,7 @@ export default function Home() {
           >
             We believe this moment matters. Technology is shaping how people
             seek truth, ask questions, and engage with faith. The Church
-            deserves to be equipped — not left behind.
+            deserves to be equipped, not left behind.
           </p>
           <p
             style={{
@@ -195,7 +194,7 @@ export default function Home() {
               fontWeight: 500,
             }}
           >
-            So we&apos;re building: faithfully, thoughtfully, and without compromise.
+            We are building faithfully, thoughtfully, and without compromise.
           </p>
         </div>
       </section>
@@ -212,7 +211,7 @@ export default function Home() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 56,
-                      }}
+          }}
         >
           Convictions, not talking points.
         </h2>
@@ -227,19 +226,19 @@ export default function Home() {
           {[
             {
               label: "About the Church",
-              text: "The Church is not an institution in decline — she is a body on the eve of her greatest hour. We build for her accordingly.",
+              text: "The Church has always been, and will always be, God's primary way of reaching people. We build to support the Church in this moment of opportunity.",
             },
             {
               label: "About Technology",
-              text: "Technology is morally neutral, but it is never spiritually neutral in practice. Who builds it, and why, shapes what it does to the people who use it.",
+              text: "Technology is not neutral, it carries the values of its creators. That's why who builds it, and why they build it, matters.",
             },
             {
               label: "About This Moment in History",
-              text: "We are living through one of the most significant technological shifts in human history. The Church cannot afford to be an afterthought in that conversation.",
+              text: "This is a defining moment for technology and culture. The Church has an opportunity to be a leader in this moment, not just respond.",
             },
             {
               label: "About Our Responsibility",
-              text: "Christians in technology are stewards, not spectators. We are accountable for what we build — and for what we choose not to build.",
+              text: "Christians in technology are stewards of what they build. What gets built, and what doesn't, matters.",
             },
           ].map((belief, i) => (
             <div key={i} className="card card-hover" style={{ padding: "36px 32px" }}>
@@ -273,7 +272,7 @@ export default function Home() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 56,
-                      }}
+          }}
         >
           Tools worthy of the mission.
         </h2>
@@ -324,13 +323,13 @@ export default function Home() {
                 fontFamily: "var(--font-inter), Inter, sans-serif",
               }}
             >
-              An AI-powered platform that gives every church an always-on,
-              theologically grounded presence across every channel their
-              congregation uses.
+              An AI-powered platform that supports your congregation around the
+              clock, answering questions, staying connected, while reducing
+              administrative burden for pastors and staff.
             </p>
           </div>
 
-          {/* Bible Navigator */}
+          {/* Bible Assistant */}
           <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
             <div style={{ marginBottom: 16 }}>
               <span
@@ -358,7 +357,7 @@ export default function Home() {
                 marginBottom: 14,
               }}
             >
-              Bible Navigator
+              Bible Assistant
             </h3>
             <p
               style={{
@@ -373,7 +372,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Eden */}
+          {/* Faith Companion */}
           <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
             <div style={{ marginBottom: 16 }}>
               <span
@@ -401,7 +400,7 @@ export default function Home() {
                 marginBottom: 14,
               }}
             >
-              Eden
+              Faith Companion
             </h3>
             <p
               style={{
@@ -411,8 +410,9 @@ export default function Home() {
                 fontFamily: "var(--font-inter), Inter, sans-serif",
               }}
             >
-              A personal AI built for the Christian life, designed to think
-              with you, pray with you, and grow with you.
+              A personal AI for the Christian life, built to help you engage
+              with Scripture, build consistent habits, and apply what you
+              believe in everyday life.
             </p>
           </div>
         </div>
@@ -426,7 +426,7 @@ export default function Home() {
           }}
         >
           Each product is built on the same conviction: that the people of God
-          deserve tools worthy of the mission they've been given.
+          deserve tools worthy of the mission they&apos;ve been given.
         </p>
         <Link
           href="/church-os"
@@ -488,8 +488,8 @@ export default function Home() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We're building a suite of AI tools for the Church and the believer —
-          rooted in Scripture, built with excellence, and offered in service.
+          We&apos;re building a suite of AI tools for churches and believers,
+          rooted in Scripture, built with excellence, and designed to serve.
         </p>
         <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
           Join the Mission

@@ -52,7 +52,7 @@ export default function ChurchOS() {
           }}
         >
           Church OS is an AI-powered ministry platform that gives your church
-          an intelligent, theologically sound presence — on every channel, at
+          an intelligent, theologically sound presence, on every channel, at
           every hour, without adding to your team's workload.
         </p>
         <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
@@ -62,7 +62,7 @@ export default function ChurchOS() {
 
       <div className="section-divider" />
 
-      {/* WHY NOW — The Market Argument */}
+      {/* WHY NOW, The Market Argument */}
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">The Moment</span>
         <h2
@@ -75,7 +75,7 @@ export default function ChurchOS() {
             marginBottom: 40,
           }}
         >
-          Faith Is Not Declining — It&apos;s Shifting.
+          Faith Is Not Declining, It&apos;s Shifting.
         </h2>
 
         <div
@@ -87,7 +87,7 @@ export default function ChurchOS() {
           }}
         >
           {[
-            { value: "19M+", label: "Bible units sold in 2025 — doubled vs. 2019" },
+            { value: "19M+", label: "Bible units sold in 2025, doubled vs. 2019" },
             { value: "10M+", label: "New Bible users in a single year" },
             { value: "62%", label: "of U.S. identifies as Christian" },
             { value: "57%", label: "rarely or never attend church" },
@@ -168,7 +168,7 @@ export default function ChurchOS() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Ministry never stops — but your team has to. Every week, first-time
+            Ministry never stops, but your team has to. Every week, first-time
             visitors leave your service with questions they don&apos;t know how to
             ask. Members reach out on a Tuesday night with something heavy on
             their heart. Families explore your website at midnight trying to
@@ -184,7 +184,7 @@ export default function ChurchOS() {
             }}
           >
             This isn&apos;t a failure of care. It&apos;s a capacity problem. Church OS
-            doesn&apos;t replace your people — it extends them.
+            doesn&apos;t replace your people, it extends them.
           </p>
         </div>
       </section>
@@ -217,7 +217,7 @@ export default function ChurchOS() {
             {
               icon: "🌐",
               label: "Omnichannel Presence",
-              text: "Church OS meets people wherever they are — your website, SMS, social media, and more — so no conversation falls through the cracks.",
+              text: "Church OS meets people wherever they are, your website, SMS, social media, and more, so no conversation falls through the cracks.",
             },
             {
               icon: "⚡",
@@ -227,12 +227,12 @@ export default function ChurchOS() {
             {
               icon: "🛡️",
               label: "Theological Guardrails",
-              text: "Every response is anchored in your church's doctrine and the truth of Scripture. Church OS doesn't freelance theology — it reflects yours.",
+              text: "Every response is anchored in your church's doctrine and the truth of Scripture. Church OS doesn't freelance theology, it reflects yours.",
             },
             {
               icon: "🧠",
               label: "Church-Specific Intelligence",
-              text: "Trained on your church — your staff, programs, calendar, values. It doesn't give generic answers; it gives your answers.",
+              text: "Trained on your church, your staff, programs, calendar, values. It doesn't give generic answers; it gives your answers.",
             },
           ].map((cap, i) => (
             <div key={i} className="card card-hover" style={{ padding: "32px 28px" }}>
@@ -296,9 +296,9 @@ export default function ChurchOS() {
           <span className="section-label">The 10pm Scenario</span>
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             {[
-              "It's 10pm on a Sunday night. A family attended your service for the first time this morning — the first time they'd stepped inside a church in years. Something stirred in them. They want to know more, but they're not ready to call anyone. So they text the number on the back of your bulletin.",
+              "It's 10pm on a Sunday night. A family attended your service for the first time this morning, the first time they'd stepped inside a church in years. Something stirred in them. They want to know more, but they're not ready to call anyone. So they text the number on the back of your bulletin.",
               "Within seconds, they get a warm, clear, theologically grounded response. It answers their question about what you believe. It tells them about your newcomer's lunch. It asks if there's anything else they'd like to know. And it signs off with the grace and tone of a church that actually cares.",
-              "That family comes back next Sunday. Not because of a program. Because someone — something — was there when they reached out.",
+              "That family comes back next Sunday. Not because of a program. Because someone, something, was there when they reached out.",
             ].map((para, i) => (
               <p
                 key={i}
@@ -387,7 +387,7 @@ export default function ChurchOS() {
             {
               n: "1",
               title: "Alignment",
-              text: "We start with a conversation about your church — your theology, your culture, your people, and what you're hoping to accomplish.",
+              text: "We start with a conversation about your church, your theology, your culture, your people, and what you're hoping to accomplish.",
             },
             {
               n: "2",
@@ -397,7 +397,7 @@ export default function ChurchOS() {
             {
               n: "3",
               title: "Training",
-              text: "We train Church OS on your specific content — sermons, FAQs, staff bios, programs, doctrinal statements — so it speaks with your voice.",
+              text: "We train Church OS on your specific content, sermons, FAQs, staff bios, programs, doctrinal statements, so it speaks with your voice.",
             },
             {
               n: "4",
@@ -463,8 +463,8 @@ export default function ChurchOS() {
           }}
         >
           We&apos;re in an early and intentional phase of growth, looking for the
-          right churches to build with — not the most churches, the right ones.
-          Pilot churches don&apos;t just get early access — they get a seat at the
+          right churches to build with, not the most churches, the right ones.
+          Pilot churches don&apos;t just get early access, they get a seat at the
           table.
         </p>
 
@@ -483,7 +483,7 @@ export default function ChurchOS() {
             },
             {
               title: "Founder Involvement",
-              text: "You'll work directly with our founding team — not a sales rep, not a support ticket. Real relationship, real accountability.",
+              text: "You'll work directly with our founding team, not a sales rep, not a support ticket. Real relationship, real accountability.",
             },
             {
               title: "Shape the Roadmap",
@@ -491,7 +491,7 @@ export default function ChurchOS() {
             },
             {
               title: "Priority Onboarding",
-              text: "We give pilot churches our full attention — dedicated setup time, hands-on training, and direct access throughout your launch.",
+              text: "We give pilot churches our full attention, dedicated setup time, hands-on training, and direct access throughout your launch.",
             },
           ].map((b, i) => (
             <div key={i} className="card card-hover" style={{ padding: "28px 24px" }}>

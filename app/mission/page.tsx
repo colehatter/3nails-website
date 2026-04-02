@@ -53,7 +53,7 @@ export default function Mission() {
           }}
         >
           We didn&apos;t name this company to be clever. We named it to be
-          accountable — to the Cross, to the Church, and to the calling we
+          accountable, to the Cross, to the Church, and to the calling we
           believe God placed on the people who built it.
         </p>
       </section>
@@ -88,7 +88,7 @@ export default function Mission() {
             The Church is the most important institution in human history. She
             has outlasted empires, endured persecution, and carried the hope of
             the world through every generation. She deserves tools built with
-            that weight in mind — tools built by people who actually believe
+            that weight in mind, tools built by people who actually believe
             what she teaches, who sit in her pews, who love her enough to serve
             her well.
           </p>
@@ -133,7 +133,7 @@ export default function Mission() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We are building a portfolio of AI tools — not a single product, but a
+          We are building a portfolio of AI tools, not a single product, but a
           layered ecosystem designed to serve the Church and the individual
           believer across every dimension of the Christian life.
         </p>
@@ -190,7 +190,7 @@ export default function Mission() {
                 maxWidth: 700,
               }}
             >
-              Church OS serves the local church — the pastors, administrators,
+              Church OS serves the local church, the pastors, administrators,
               and ministry teams who give everything to their congregations.
               It&apos;s an AI-powered ministry platform that extends reach and
               responsiveness without adding headcount. It meets people where they
@@ -199,7 +199,7 @@ export default function Mission() {
             </p>
           </div>
 
-          {/* Bible Navigator */}
+          {/* Bible Assistant */}
           <div className="card" style={{ padding: "36px 32px", opacity: 0.8 }}>
             <div
               style={{
@@ -217,7 +217,7 @@ export default function Mission() {
                   color: "#ffffff",
                 }}
               >
-                Bible Navigator
+                Bible Assistant
               </h3>
               <span
                 style={{
@@ -246,13 +246,13 @@ export default function Mission() {
             >
               A deeply intelligent study companion built for the believer who
               wants to go deeper in the Word. Not a search engine with a Bible
-              filter — a thoughtful guide through Scripture that helps you
+              filter, a thoughtful guide through Scripture that helps you
               understand context, trace themes, and encounter the living God
               through His Word.
             </p>
           </div>
 
-          {/* Eden */}
+          {/* Faith Companion */}
           <div className="card" style={{ padding: "36px 32px", opacity: 0.8 }}>
             <div
               style={{
@@ -270,7 +270,7 @@ export default function Mission() {
                   color: "#ffffff",
                 }}
               >
-                Eden
+                Faith Companion
               </h3>
               <span
                 style={{
@@ -298,7 +298,7 @@ export default function Mission() {
               }}
             >
               A personal AI built for the whole Christian life. It thinks with
-              you, walks with you, and grows with you — through decisions,
+              you, walks with you, and grows with you, through decisions,
               through hard seasons, through the daily discipline of becoming more
               like Christ. The most personal product we&apos;re building, built with
               great care.
@@ -336,7 +336,7 @@ export default function Mission() {
 
       <div className="section-divider" />
 
-      {/* THE MOMENT WE'RE IN — with stat argument */}
+      {/* THE MOMENT WE'RE IN, with stat argument */}
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "64px 32px" }}>
         <span className="section-label">The Moment We&apos;re In</span>
 
@@ -391,7 +391,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Something is shifting. You can feel it — in the culture, in the
+            Something is shifting. You can feel it, in the culture, in the
             Church, in the conversations happening in living rooms and
             sanctuaries across the country. There is a hunger. A searching. An
             openness that hasn&apos;t existed in decades.
@@ -404,7 +404,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Church historians talk about Great Awakenings — those sovereign,
+            Church historians talk about Great Awakenings, those sovereign,
             unmistakable movements of God that reshape a generation. We do not
             claim to know the timing or the scope of what God is doing. But we
             believe, deeply and soberly, that this is a moment that demands the
@@ -418,7 +418,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            This is the moment 3Nails was built for — not to capitalize on it,
+            This is the moment 3Nails was built for, not to capitalize on it,
             but to be found faithful in it.
           </p>
         </div>
@@ -450,7 +450,7 @@ export default function Mission() {
               marginBottom: 24,
             }}
           >
-            We commit to building tools that serve the Church — not tools that
+            We commit to building tools that serve the Church, not tools that
             exploit her trust, dilute her theology, or treat her as a
             demographic. We will build with excellence because the mission
             demands it. We will build with honesty because the Gospel requires
