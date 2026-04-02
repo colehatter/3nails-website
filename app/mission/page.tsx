@@ -36,7 +36,8 @@ export default function Mission() {
             fontSize: "clamp(2.2rem, 5.5vw, 4rem)",
             fontWeight: 700,
             color: "#ffffff",
-                        margin: "0 auto 20px",
+            maxWidth: 640,
+            margin: "0 auto 20px",
             lineHeight: 1.1,
           }}
         >
@@ -117,9 +118,98 @@ export default function Mission() {
 
       <div className="section-divider" />
 
-      {/* THE 3NAILS ECOSYSTEM */}
+      {/* THE MOMENT WE'RE IN */}
+      <section style={{ maxWidth: 900, margin: "0 auto", padding: "64px 32px" }}>
+        <span className="section-label">The Moment We&apos;re In</span>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: 16,
+            marginBottom: 40,
+          }}
+        >
+          {[
+            { value: "19M+", label: "Bible units sold in 2025" },
+            { value: "62%", label: "of America identifies as Christian" },
+            { value: "57%", label: "rarely or never attend church" },
+            { value: "Now", label: "The infrastructure window is open" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              style={{
+                background: "rgba(52,198,244,0.04)",
+                border: "1px solid rgba(52,198,244,0.12)",
+                borderRadius: 10,
+                padding: "20px 16px",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+                  fontWeight: 700,
+                  color: "#34C6F4",
+                  lineHeight: 1,
+                  marginBottom: 8,
+                }}
+              >
+                {stat.value}
+              </div>
+              <div style={{ color: "#8a9ab0", fontSize: 12, lineHeight: 1.4 }}>{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            Something is shifting. You can feel it, in the culture, in the
+            Church, in the conversations happening in living rooms and
+            sanctuaries across the country. There is a hunger. A searching. An
+            openness that hasn&apos;t existed in decades.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            Church historians talk about Great Awakenings, those sovereign,
+            unmistakable movements of God that reshape a generation. We do not
+            claim to know the timing or the scope of what God is doing. But we
+            believe, deeply and soberly, that this is a moment that demands the
+            Church be ready. Present. Accessible. Equipped.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#c8d4e0",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+            }}
+          >
+            This is the moment 3Nails was built for, not to capitalize on it,
+            but to be found faithful in it.
+          </p>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* THE 3NAILS ECOSYSTEM — "here's what we're doing about it" */}
       <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
-        <span className="section-label">The 3Nails Ecosystem</span>
+        <span className="section-label">What We&apos;re Building</span>
         <h2
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
@@ -127,7 +217,7 @@ export default function Mission() {
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: 16,
-                      }}
+          }}
         >
           Not a product. A portfolio.
         </h2>
@@ -314,7 +404,6 @@ export default function Mission() {
           </div>
         </div>
 
-        {/* Flywheel statement */}
         <div
           style={{
             marginTop: 36,
@@ -334,100 +423,10 @@ export default function Mission() {
               textAlign: "center",
             }}
           >
-            Together, these three products form a flywheel: the Church is
+            Together, these products form a connected system: the Church is
             strengthened, the believer is equipped, and the community of faith
             grows deeper, more connected, and more effective in its mission to
             the world.
-          </p>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* THE MOMENT WE'RE IN, with stat argument */}
-      <section style={{ maxWidth: 900, margin: "0 auto", padding: "64px 32px" }}>
-        <span className="section-label">The Moment We&apos;re In</span>
-
-        {/* Stat row */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-            gap: 16,
-            marginBottom: 40,
-          }}
-        >
-          {[
-            { value: "19M+", label: "Bible units sold in 2025" },
-            { value: "62%", label: "of America identifies as Christian" },
-            { value: "57%", label: "rarely or never attend church" },
-            { value: "Now", label: "The infrastructure window is open" },
-          ].map((stat, i) => (
-            <div
-              key={i}
-              style={{
-                background: "rgba(52,198,244,0.04)",
-                border: "1px solid rgba(52,198,244,0.12)",
-                borderRadius: 10,
-                padding: "20px 16px",
-                textAlign: "center",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                  fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-                  fontWeight: 700,
-                  color: "#34C6F4",
-                  lineHeight: 1,
-                  marginBottom: 8,
-                }}
-              >
-                {stat.value}
-              </div>
-              <div style={{ color: "#8a9ab0", fontSize: 12, lineHeight: 1.4 }}>{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
-            Something is shifting. You can feel it, in the culture, in the
-            Church, in the conversations happening in living rooms and
-            sanctuaries across the country. There is a hunger. A searching. An
-            openness that hasn&apos;t existed in decades.
-          </p>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
-            Church historians talk about Great Awakenings, those sovereign,
-            unmistakable movements of God that reshape a generation. We do not
-            claim to know the timing or the scope of what God is doing. But we
-            believe, deeply and soberly, that this is a moment that demands the
-            Church be ready. Present. Accessible. Equipped.
-          </p>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
-            This is the moment 3Nails was built for, not to capitalize on it,
-            but to be found faithful in it.
           </p>
         </div>
       </section>

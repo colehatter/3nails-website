@@ -170,17 +170,6 @@ export default function Home() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Our Church OS helps churches answer questions, serve their
-            communities, and steward their time more effectively.
-          </p>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
             We believe this moment matters. Technology is shaping how people
             seek truth, ask questions, and engage with faith. The Church
             deserves to be equipped, not left behind.
@@ -262,183 +251,37 @@ export default function Home() {
 
       <div className="section-divider" />
 
-      {/* OUR PRODUCTS */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px" }}>
-        <span className="section-label">Our Products</span>
+      {/* CHURCH OS — single product CTA, no grid */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "64px 32px", textAlign: "center" }}>
+        <span className="section-label">Our First Product</span>
         <h2
           style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
             fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
             fontWeight: 700,
             color: "#ffffff",
-            marginBottom: 56,
-          }}
-        >
-          Tools worthy of the mission.
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: 24,
-            marginBottom: 48,
-          }}
-        >
-          {/* Church OS */}
-          <div className="card card-hover" style={{ padding: "40px 32px" }}>
-            <div style={{ marginBottom: 16 }}>
-              <span
-                style={{
-                  background: "rgba(52,198,244,0.15)",
-                  color: "#34C6F4",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  padding: "4px 12px",
-                  borderRadius: 999,
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                }}
-              >
-                Live Now
-              </span>
-            </div>
-            <h3
-              style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                fontSize: 22,
-                fontWeight: 700,
-                color: "#ffffff",
-                marginBottom: 14,
-              }}
-            >
-              Church OS
-            </h3>
-            <p
-              style={{
-                color: "#8a9ab0",
-                fontSize: 14,
-                lineHeight: 1.75,
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-              }}
-            >
-              An AI-powered platform that supports your congregation around the
-              clock, answering questions, staying connected, while reducing
-              administrative burden for pastors and staff.
-            </p>
-          </div>
-
-          {/* Bible Assistant */}
-          <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
-            <div style={{ marginBottom: 16 }}>
-              <span
-                style={{
-                  background: "rgba(154,138,92,0.15)",
-                  color: "#9A8A5C",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  padding: "4px 12px",
-                  borderRadius: 999,
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                }}
-              >
-                Coming Soon
-              </span>
-            </div>
-            <h3
-              style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                fontSize: 22,
-                fontWeight: 700,
-                color: "#ffffff",
-                marginBottom: 14,
-              }}
-            >
-              Bible Assistant
-            </h3>
-            <p
-              style={{
-                color: "#8a9ab0",
-                fontSize: 14,
-                lineHeight: 1.75,
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-              }}
-            >
-              A deeply intelligent Bible study companion that helps believers
-              read, understand, and live the Word.
-            </p>
-          </div>
-
-          {/* Faith Companion */}
-          <div className="card" style={{ padding: "40px 32px", opacity: 0.75 }}>
-            <div style={{ marginBottom: 16 }}>
-              <span
-                style={{
-                  background: "rgba(154,138,92,0.15)",
-                  color: "#9A8A5C",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  padding: "4px 12px",
-                  borderRadius: 999,
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                }}
-              >
-                Coming Soon
-              </span>
-            </div>
-            <h3
-              style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                fontSize: 22,
-                fontWeight: 700,
-                color: "#ffffff",
-                marginBottom: 14,
-              }}
-            >
-              Faith Companion
-            </h3>
-            <p
-              style={{
-                color: "#8a9ab0",
-                fontSize: 14,
-                lineHeight: 1.75,
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-              }}
-            >
-              A personal AI for the Christian life, built to help you engage
-              with Scripture, build consistent habits, and apply what you
-              believe in everyday life.
-            </p>
-          </div>
-        </div>
-
-        <p
-          style={{
-            color: "#8a9ab0",
-            fontSize: 14,
-            fontFamily: "var(--font-inter), Inter, sans-serif",
             marginBottom: 20,
           }}
         >
-          Each product is built on the same conviction: that the people of God
-          deserve tools worthy of the mission they&apos;ve been given.
-        </p>
-        <Link
-          href="/church-os"
+          Church OS is live.
+        </h2>
+        <p
           style={{
-            color: "#34C6F4",
-            textDecoration: "none",
+            color: "#8a9ab0",
+            fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+            maxWidth: 580,
+            margin: "0 auto 40px",
+            lineHeight: 1.8,
             fontFamily: "var(--font-inter), Inter, sans-serif",
-            fontSize: 15,
-            fontWeight: 600,
           }}
         >
-          Explore our work →
+          An AI-powered platform that supports your congregation around the
+          clock, answering questions, staying connected, while reducing
+          administrative burden for pastors and staff. We are currently
+          accepting pilot applications.
+        </p>
+        <Link href="/church-os" className="btn-primary-lg">
+          Learn About Church OS
         </Link>
       </section>
 
