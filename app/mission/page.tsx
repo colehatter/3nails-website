@@ -72,10 +72,9 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            3Nails.ai was not founded because someone saw a gap in the market.
-            It was founded because a group of Christians who work in technology
-            asked a question they couldn&apos;t shake:{" "}
-            <em style={{ color: "#ffffff" }}>If not us, then who?</em>
+            3Nails.ai wasn&apos;t founded by accident, we believe we&apos;re called to
+            build technology by believers, for believers. It started with a
+            simple question: If not us, then who?
           </p>
           <p
             style={{
@@ -85,12 +84,10 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            The Church is the most important institution in human history. She
-            has outlasted empires, endured persecution, and carried the hope of
-            the world through every generation. She deserves tools built with
-            that weight in mind, tools built by people who actually believe
-            what she teaches, who sit in her pews, who love her enough to serve
-            her well.
+            The Church has carried truth, hope, and impact through every
+            generation. It deserves tools built with that same level of care,
+            by people who share its convictions and are committed to serving it
+            well.
           </p>
           <p
             style={{
@@ -100,9 +97,20 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            We exist to close the gap between the pace of technological change
-            and the Church&apos;s ability to steward it faithfully. This is not our
-            passion project. It is our act of worship.
+            We exist to help close the gap between rapid technological change
+            and the Church&apos;s ability to use it faithfully.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              color: "#ffffff",
+              lineHeight: 1.8,
+              fontFamily: "var(--font-inter), Inter, sans-serif",
+              fontWeight: 500,
+            }}
+          >
+            This isn&apos;t a side project. It&apos;s a responsibility, and we&apos;re
+            building accordingly.
           </p>
         </div>
       </section>
@@ -133,9 +141,9 @@ export default function Mission() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We are building a portfolio of AI tools, not a single product, but a
-          layered ecosystem designed to serve the Church and the individual
-          believer across every dimension of the Christian life.
+          Not a single product, but a growing portfolio of tools. We&apos;re
+          building a connected system of resources designed to support churches
+          and believers in how they lead, learn, and live out their faith.
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
