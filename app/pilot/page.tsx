@@ -102,8 +102,8 @@ export default function PilotPage() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          Pilot churches get Church OS completely free for 90 days — including
-          full setup, onboarding, and direct access to our team. You&apos;ll help us
+          Pilot churches get Church OS at cost for 90 days — including full
+          setup, onboarding, and direct access to our team. You&apos;ll help us
           refine the product while we handle everything technical, so your team
           can focus on ministry.
         </p>
