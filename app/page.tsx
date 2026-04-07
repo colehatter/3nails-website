@@ -17,7 +17,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          padding: "72px 32px 80px",
+          padding: "72px 32px 40px",
           overflow: "hidden",
         }}
       >
@@ -79,24 +79,8 @@ export default function Home() {
           AI Built on the Foundation That Holds.
         </h1>
 
-        {/* Subheadline */}
-        <p
-          style={{
-            fontSize: "clamp(1rem, 2vw, 1.15rem)",
-            color: "#8a9ab0",
-            maxWidth: 560,
-            lineHeight: 1.75,
-            marginBottom: 44,
-            fontFamily: "var(--font-inter), Inter, sans-serif",
-          }}
-        >
-          3Nails.ai is a Christian technology company creating AI tools for the
-          Church and the believer. We exist not because the market demanded it,
-          but because we were called to it.
-        </p>
-
         {/* CTAs */}
-        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+        <div className="hero-cta-group" style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
           <Link href="/church-os" className="btn-primary-lg">
             Explore Our Work
           </Link>
@@ -109,7 +93,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* WHO WE ARE */}
-      <section style={{ maxWidth: 800, margin: "0 auto", padding: "64px 32px" }}>
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "40px 32px 64px" }}>
         <span className="section-label">Who We Are</span>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <p
@@ -120,8 +104,7 @@ export default function Home() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            3Nails.ai is a Christian technology company building AI tools
-            specifically for the Church.
+            3Nails.ai is a Christian technology company building AI tools specifically for the Church and for believers.
           </p>
           <p
             style={{
@@ -145,22 +128,8 @@ export default function Home() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Our name comes from the three nails of the crucifixion. It&apos;s not
-            branding, it&apos;s our foundation. Everything we build is shaped by a
-            commitment to biblical truth, theological integrity, and real-world
-            usefulness for the Church.
-          </p>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
             We exist to strengthen and extend the work already happening in the
-            Church, helping pastors lead, equipping teams to respond, and
-            serving people with clarity and care.
+            Church: helping pastors lead, equipping teams to respond, serving people with clarity and care, and equipping believers with daily support tools.
           </p>
           <p
             style={{
@@ -176,11 +145,13 @@ export default function Home() {
           </p>
           <p
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+              fontSize: "clamp(1.2rem, 2.2vw, 1.45rem)",
               color: "#ffffff",
               lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontWeight: 500,
+              fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+              fontWeight: 700,
+              textAlign: "center",
+              marginTop: 16,
             }}
           >
             We are building faithfully, thoughtfully, and without compromise.
@@ -205,11 +176,13 @@ export default function Home() {
           Convictions, not talking points.
         </h2>
 
+        {/* Row 1: 3 cards */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 24,
+            marginBottom: 24,
           }}
         >
           {[
@@ -224,10 +197,6 @@ export default function Home() {
             {
               label: "About This Moment in History",
               text: "This is a defining moment for technology and culture. The Church has an opportunity to be a leader in this moment, not just respond.",
-            },
-            {
-              label: "About Our Responsibility",
-              text: "Christians in technology are stewards of what they build. What gets built, and what doesn't, matters.",
             },
           ].map((belief, i) => (
             <div key={i} className="card card-hover" style={{ padding: "36px 32px" }}>
@@ -246,6 +215,24 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+        {/* Row 2: centered single card */}
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="card card-hover beliefs-row2" style={{ padding: "36px 32px", maxWidth: 480, width: "100%" }}>
+            <span className="section-label" style={{ marginBottom: 14 }}>
+              About Our Responsibility
+            </span>
+            <p
+              style={{
+                color: "#c8d4e0",
+                fontSize: 15,
+                lineHeight: 1.8,
+                fontFamily: "var(--font-inter), Inter, sans-serif",
+              }}
+            >
+              Christians in technology are stewards of what they build. What gets built, and what doesn&apos;t, matters.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -275,7 +262,7 @@ export default function Home() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          An AI-powered platform that supports your congregation around the
+          An AI-powered platform that supports church congregations around the
           clock, answering questions, staying connected, while reducing
           administrative burden for pastors and staff. We are currently
           accepting pilot applications.
@@ -331,12 +318,12 @@ export default function Home() {
             fontFamily: "var(--font-inter), Inter, sans-serif",
           }}
         >
-          We&apos;re building a suite of AI tools for churches and believers,
-          rooted in Scripture, built with excellence, and designed to serve.
+          God is moving in undeniable ways across the world.<br />
+          We&apos;re building for the world that&apos;s coming.
         </p>
-        <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
+        <Link href="/church-os" className="btn-primary-lg">
           Join the Mission
-        </a>
+        </Link>
       </section>
 
       <Footer />

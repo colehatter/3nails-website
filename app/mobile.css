@@ -1,0 +1,280 @@
+/* ============================================================
+   3Nails.ai — Mobile Responsive Overrides
+   Targets: max-width 768px
+   Strategy: CSS class overrides + media queries only.
+              Do NOT touch inline styles in TSX.
+   ============================================================ */
+
+/* Always hide mobile-only elements on desktop */
+.nav-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* ----------------------------------------------------------
+     NAV — Hamburger mobile menu
+  ---------------------------------------------------------- */
+
+  /* Hide desktop nav links/button by default on mobile */
+  .nav-desktop-links {
+    display: none !important;
+  }
+
+  /* Show hamburger button */
+  .nav-hamburger {
+    display: flex !important;
+  }
+
+  /* Mobile menu overlay (hidden by default) */
+  .nav-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 68px; /* nav height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0d1220 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-top: 1px solid rgba(52, 198, 244, 0.12);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 24px;
+    gap: 8px;
+    z-index: 9999;
+  }
+
+  /* Show mobile menu when open */
+  .nav-mobile-menu.open {
+    display: flex !important;
+  }
+
+  .nav-mobile-menu .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 0;
+    color: #c8d4e0;
+    border-bottom: 1px solid rgba(52, 198, 244, 0.08);
+    display: block;
+    text-align: left;
+  }
+
+  .nav-mobile-menu .nav-link:last-of-type {
+    border-bottom: none;
+  }
+
+  .nav-mobile-menu .btn-primary {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 16px;
+    padding: 16px 24px !important;
+    font-size: 15px !important;
+    box-sizing: border-box;
+  }
+
+  /* Reduce nav container padding on mobile */
+  .nav-inner {
+    padding: 0 20px !important;
+  }
+
+  /* ----------------------------------------------------------
+     HERO — All pages
+  ---------------------------------------------------------- */
+
+  /* Hero h1 size cap */
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+  }
+
+  /* Cross SVG wrapper */
+  .cross-glow-pulse {
+    margin-bottom: 20px !important;
+  }
+
+  /* Hero CTA button group — stack vertically */
+  .hero-cta-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+    gap: 12px !important;
+  }
+
+  .hero-cta-group a,
+  .hero-cta-group button {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 24px !important;
+    box-sizing: border-box;
+  }
+
+  /* ----------------------------------------------------------
+     BUTTONS
+  ---------------------------------------------------------- */
+
+  .btn-primary-lg {
+    width: 100% !important;
+    padding: 16px 24px !important;
+    font-size: 15px !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+    display: flex !important;
+  }
+
+  .btn-outline {
+    width: 100% !important;
+    padding: 16px 24px !important;
+    font-size: 15px !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+    display: flex !important;
+  }
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY & SECTION PADDING
+  ---------------------------------------------------------- */
+
+  h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+  }
+
+  /* All sections get mobile padding */
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  p {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* ----------------------------------------------------------
+     GRIDS — Collapse to single column
+  ---------------------------------------------------------- */
+
+  /* Generic grid → 1 column */
+  [style*="display: grid"],
+  [style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Stat bubbles → 2 columns */
+  .stat-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ----------------------------------------------------------
+     CARDS
+  ---------------------------------------------------------- */
+
+  .card {
+    padding: 24px 20px !important;
+  }
+
+  .callout-gold {
+    padding: 20px 20px !important;
+  }
+
+  /* ----------------------------------------------------------
+     10PM SCENARIO BOX (church-os page)
+  ---------------------------------------------------------- */
+
+  .scenario-box {
+    padding: 36px 24px !important;
+    margin: 0 !important;
+  }
+
+  /* ----------------------------------------------------------
+     BELIEFS GRID (homepage) — 3+1 layout → full width
+  ---------------------------------------------------------- */
+
+  /* Row 2 centered card → full width */
+  .beliefs-row2 {
+    max-width: 100% !important;
+  }
+
+  /* ----------------------------------------------------------
+     FLYWHEEL / FEATURE PILLS — wrap nicely
+  ---------------------------------------------------------- */
+
+  .flywheel-strip {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  /* ----------------------------------------------------------
+     FOOTER — stack columns
+  ---------------------------------------------------------- */
+
+  footer [style*="display: flex"],
+  footer [style*="display:flex"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  /* ----------------------------------------------------------
+     MISC — overflow safety
+  ---------------------------------------------------------- */
+
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent horizontal scroll from absolutely-positioned radial blobs */
+  section {
+    overflow-x: hidden;
+  }
+
+}
+
+/* ----------------------------------------------------------
+   Hamburger button — hidden on desktop, shown on mobile
+---------------------------------------------------------- */
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #c8d4e0;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

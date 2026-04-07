@@ -73,22 +73,8 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            3Nails.ai wasn&apos;t founded by accident, we believe we&apos;re called to
-            build technology by believers, for believers. It started with a
+            3Nails.ai wasn&apos;t founded by accident, we are on a mission to build technology by believers, for believers. It started with a
             simple question: If not us, then who?
-          </p>
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-            }}
-          >
-            The Church has carried truth, hope, and impact through every
-            generation. It deserves tools built with that same level of care,
-            by people who share its convictions and are committed to serving it
-            well.
           </p>
           <p
             style={{
@@ -172,10 +158,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Something is shifting. You can feel it, in the culture, in the
-            Church, in the conversations happening in living rooms and
-            sanctuaries across the country. There is a hunger. A searching. An
-            openness that hasn&apos;t existed in decades.
+            Something is shifting. You can feel it, in the culture, in the Church, in conversations happening in living rooms and sanctuaries across the country. There is a hunger. A searching. An openness that hasn&apos;t existed in decades.
           </p>
           <p
             style={{
@@ -185,11 +168,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Church historians talk about Great Awakenings, those sovereign,
-            unmistakable movements of God that reshape a generation. We do not
-            claim to know the timing or the scope of what God is doing. But we
-            believe, deeply and soberly, that this is a moment that demands the
-            Church be ready. Present. Accessible. Equipped.
+            Church historians speak of Great Awakenings: sovereign, unmistakable movements of God that reshape generations. We don&apos;t claim to know the timing or the scope of what God is doing. But we believe deeply that this is a moment the Church must be ready for. Present. Accessible. Equipped.
           </p>
           <p
             style={{
@@ -199,8 +178,7 @@ export default function Mission() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            This is the moment 3Nails was built for, not to capitalize on it,
-            but to be found faithful in it.
+            This is the moment 3Nails.ai was built for.
           </p>
         </div>
       </section>
@@ -395,8 +373,7 @@ export default function Mission() {
                 maxWidth: 700,
               }}
             >
-              A personal AI built for the whole Christian life. It thinks with
-              you, walks with you, and grows with you, through decisions,
+              A personal AI built for the whole Christian life. It works with you, walks with you, and grows with you, through decisions,
               through hard seasons, through the daily discipline of becoming more
               like Christ. The most personal product we&apos;re building, built with
               great care.
@@ -426,7 +403,7 @@ export default function Mission() {
             Together, these products form a connected system: the Church is
             strengthened, the believer is equipped, and the community of faith
             grows deeper, more connected, and more effective in its mission to
-            the world.
+            the world. Tools they can trust.
           </p>
         </div>
       </section>
@@ -448,34 +425,25 @@ export default function Mission() {
             paddingLeft: 32,
           }}
         >
-          <p
-            style={{
-              fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
-              color: "#c8d4e0",
-              lineHeight: 1.8,
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              marginBottom: 24,
-            }}
-          >
-            We commit to building tools that serve the Church, not tools that
-            exploit her trust, dilute her theology, or treat her as a
-            demographic. We will build with excellence because the mission
-            demands it. We will build with honesty because the Gospel requires
-            it.
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-              fontStyle: "italic",
-              fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
-              color: "#9A8A5C",
-              lineHeight: 1.65,
-            }}
-          >
-            The three nails are our name because they are our standard. The
-            Cross cost everything. Building for the Church should cost something
-            too.
-          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {[
+              "A commitment to building tools that serve the Church. Tools we can trust.",
+              "A commitment to excellence, because the mission demands it.",
+              "A commitment to honesty, because the Gospel requires it.",
+            ].map((line, i) => (
+              <p
+                key={i}
+                style={{
+                  fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
+                  color: "#c8d4e0",
+                  lineHeight: 1.8,
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                }}
+              >
+                {line}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 

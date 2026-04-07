@@ -55,7 +55,7 @@ export default function ChurchOS() {
           an intelligent, theologically sound presence, on every channel, at
           every hour, without adding to your team's workload.
         </p>
-        <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
+        <a href="/church-os#pilot" className="btn-primary-lg">
           Book a Pilot Conversation
         </a>
       </section>
@@ -79,6 +79,7 @@ export default function ChurchOS() {
         </h2>
 
         <div
+          className="stat-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -87,10 +88,10 @@ export default function ChurchOS() {
           }}
         >
           {[
-            { value: "19M+", label: "Bible units sold in 2025, doubled vs. 2019" },
-            { value: "10M+", label: "New Bible users in a single year" },
-            { value: "62%", label: "of U.S. identifies as Christian" },
-            { value: "57%", label: "rarely or never attend church" },
+            { value: "#1", label: "Christians are the #1 daily mobile users in the faith category" },
+            { value: "79.5%", label: "increase in faith-based app downloads since 2019" },
+            { value: "~1B", label: "YouVersion downloads worldwide" },
+            { value: "10s of M", label: "Faith apps accessed by tens of millions of users daily" },
           ].map((stat, i) => (
             <div key={i} className="card card-hover" style={{ padding: "28px 20px", textAlign: "center" }}>
               <div
@@ -125,7 +126,7 @@ export default function ChurchOS() {
             fontWeight: 600,
           }}
         >
-          Demand is rising. The infrastructure does not exist yet.
+          Demand is rising. An AI infrastructure we can trust does not exist yet.
         </div>
       </section>
 
@@ -168,12 +169,7 @@ export default function ChurchOS() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            Ministry never stops, but your team has to. Every week, first-time
-            visitors leave your service with questions they don&apos;t know how to
-            ask. Members reach out on a Tuesday night with something heavy on
-            their heart. Families explore your website at midnight trying to
-            figure out if your church is the right fit. And more often than
-            not, they get silence.
+            Ministry never stops, but your team has to. Every week, first-time visitors leave with questions they don&apos;t know how to ask. Members reach out on a Tuesday night carrying something heavy, but are after office hours. Families visit your website at midnight, trying to decide if your church is the right fit. Too often, they find silence.
           </p>
           <p
             style={{
@@ -183,8 +179,7 @@ export default function ChurchOS() {
               fontFamily: "var(--font-inter), Inter, sans-serif",
             }}
           >
-            This isn&apos;t a failure of care. It&apos;s a capacity problem. Church OS
-            doesn&apos;t replace your people, it extends them.
+            This isn&apos;t a failure of care. It&apos;s a capacity problem. Church OS doesn&apos;t replace your people, it amplifies them, and is available 24/7.
           </p>
         </div>
       </section>
@@ -269,6 +264,7 @@ export default function ChurchOS() {
       {/* THE 10PM SCENARIO */}
       <section style={{ padding: "0 32px" }}>
         <div
+          className="scenario-box"
           style={{
             maxWidth: 860,
             margin: "0 auto",
@@ -298,17 +294,16 @@ export default function ChurchOS() {
             {[
               "It's 10pm on a Sunday night. A family attended your service for the first time this morning, the first time they'd stepped inside a church in years. Something stirred in them. They want to know more, but they're not ready to call anyone. So they text the number on the back of your bulletin.",
               "Within seconds, they get a warm, clear, theologically grounded response. It answers their question about what you believe. It tells them about your newcomer's lunch. It asks if there's anything else they'd like to know. And it signs off with the grace and tone of a church that actually cares.",
-              "That family comes back next Sunday. Not because of a program. Because someone, something, was there when they reached out.",
+              "That family comes back next Sunday. Not because of AI software, but because they received immediate answers to their questions the moment they reached out.",
             ].map((para, i) => (
               <p
                 key={i}
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                  fontStyle: "italic",
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
                   fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
                   color: i === 2 ? "#34C6F4" : "#c8d4e0",
                   lineHeight: 1.8,
-                  fontWeight: i === 2 ? 600 : 400,
+                  fontWeight: i === 2 ? 700 : 400,
                 }}
               >
                 {para}
@@ -487,7 +482,7 @@ export default function ChurchOS() {
             },
             {
               title: "Shape the Roadmap",
-              text: "Your feedback doesn't go into a suggestion box. It goes into our product planning. Pilot churches determine where Church OS goes next.",
+              text: "Your feedback doesn't go into a suggestion box. It goes into our product planning. Pilot churches help guide where Church OS goes next.",
             },
             {
               title: "Priority Onboarding",
@@ -538,7 +533,7 @@ export default function ChurchOS() {
           </p>
         </div>
 
-        <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
+        <a href="/church-os#pilot" className="btn-primary-lg">
           Apply for the Pilot Program
         </a>
       </section>
@@ -593,7 +588,7 @@ export default function ChurchOS() {
         >
           We built Church OS to help you reach them further.
         </p>
-        <a href="mailto:cole@3nails.ai" className="btn-primary-lg">
+        <a href="/church-os#pilot" className="btn-primary-lg">
           Book a Pilot Conversation
         </a>
       </section>

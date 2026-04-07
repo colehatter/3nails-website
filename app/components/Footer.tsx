@@ -63,17 +63,6 @@ export default function Footer() {
         >
           AI Built on the Foundation That Holds.
         </p>
-        <a
-          href="mailto:cole@3nails.ai"
-          style={{
-            color: "#34C6F4",
-            textDecoration: "none",
-            fontSize: 14,
-            fontFamily: "var(--font-inter), Inter, sans-serif",
-          }}
-        >
-          cole@3nails.ai
-        </a>
         <p
           style={{
             color: "#8a9ab0",
