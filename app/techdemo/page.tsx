@@ -36,7 +36,7 @@ export default function TechDemo() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/chat-generic", {
+      const res = await fetch("/api/chat-generic/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg }),
