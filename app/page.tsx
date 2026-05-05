@@ -72,12 +72,27 @@ export default function Home() {
             fontSize: "clamp(1.3rem, 3vw, 2rem)",
             fontWeight: 400,
             color: "#c8d4e0",
-            marginBottom: 28,
+            marginBottom: 16,
             maxWidth: 540,
           }}
         >
           AI Built on the Foundation That Holds.
         </h1>
+
+        {/* Mission statement */}
+        <p
+          style={{
+            fontFamily: "var(--font-inter), Inter, sans-serif",
+            fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
+            fontWeight: 500,
+            color: "#8a9ab0",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            marginBottom: 28,
+          }}
+        >
+          3Nails.ai exists to Make Heaven Crowded.
+        </p>
 
         {/* CTAs */}
         <div className="hero-cta-group" style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
@@ -118,7 +133,7 @@ export default function Home() {
             generic AI systems that weren&apos;t designed with Scripture, theology,
             or the local church in mind. Our mission is simple: create tools you
             can trust, tools that serve your ministry, respect your doctrine,
-            and support your people well.
+            and support your people well. We exist to Make Heaven Crowded, building AI tools that help the Church reach more people, more effectively, with the love of Jesus.
           </p>
           <p
             style={{
@@ -320,6 +335,18 @@ export default function Home() {
         >
           God is moving in undeniable ways across the world.<br />
           We&apos;re building for the world that&apos;s coming.
+        </p>
+        <p
+          style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#ffffff",
+            margin: "0 auto 44px",
+          }}
+        >
+          Make Heaven Crowded.
         </p>
         <Link href="/church-os" className="btn-primary-lg">
           Join the Mission

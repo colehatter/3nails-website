@@ -18,14 +18,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "3Nails.ai — AI Infrastructure for the Church",
-  description: "Building the AI Infrastructure for the Next Era of the Church. Putting AI in the hands of the Church to reach further, respond faster, and disciple deeper.",
+  title: "3Nails.ai - Make Heaven Crowded",
+  description: "Make Heaven Crowded. 3Nails.ai builds AI tools for the Church to reach more people, more effectively, with the love of Jesus.",
   openGraph: {
-    title: "3Nails.ai — AI Infrastructure for the Church",
-    description: "Building the AI Infrastructure for the Next Era of the Church.",
+    title: "3Nails.ai - Make Heaven Crowded",
+    description: "Make Heaven Crowded. 3Nails.ai builds AI tools for the Church to reach more people, more effectively, with the love of Jesus.",
     url: "https://3nails.ai",
     siteName: "3Nails.ai",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Nails.ai - Make Heaven Crowded",
+    description: "Make Heaven Crowded. 3Nails.ai builds AI tools for the Church to reach more people, more effectively, with the love of Jesus.",
+  },
+  alternates: {
+    canonical: "https://3nails.ai",
   },
 };
 

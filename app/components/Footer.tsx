@@ -65,6 +65,17 @@ export default function Footer() {
         </p>
         <p
           style={{
+            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+            fontStyle: "italic",
+            fontSize: 13,
+            color: "#8a9ab0",
+            letterSpacing: "0.04em",
+          }}
+        >
+          3Nails.ai: Make Heaven Crowded
+        </p>
+        <p
+          style={{
             color: "#8a9ab0",
             fontSize: 13,
             fontFamily: "var(--font-inter), Inter, sans-serif",

@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+  title: "3Nails.ai - Church OS | AI Platform for Churches",
+  description: "Church OS replaces 5-6 disconnected church tools with one AI-powered platform. Built by Christians, for churches. Currently accepting pilot applications.",
+  openGraph: {
+    title: "Church OS | AI Platform for Churches",
+    description: "Replace Planning Center, Mailchimp, Tithe.ly and more with one platform. AI built specifically for ministry.",
+    url: "https://3nails.ai/church-os",
+    siteName: "3Nails.ai",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://3nails.ai/church-os",
+  },
+};
 
 export default function ChurchOS() {
   return (
