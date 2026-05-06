@@ -43,7 +43,7 @@ export default function Home() {
             alt="3Nails.ai"
             width={480}
             height={160}
-            style={{ objectFit: "contain", width: "clamp(320px, 85vw, 600px)", height: "auto" }}
+            style={{ objectFit: "contain", width: "clamp(300px, 80vw, 560px)", height: "auto" }}
             priority
           />
         </div>
