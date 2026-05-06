@@ -41,9 +41,9 @@ export default function Home() {
           <Image
             src="/images/logo.png"
             alt="3Nails.ai"
-            width={280}
-            height={100}
-            style={{ objectFit: "contain" }}
+            width={480}
+            height={160}
+            style={{ objectFit: "contain", width: "clamp(280px, 60vw, 480px)", height: "auto" }}
             priority
           />
         </div>
