@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -35,33 +36,16 @@ export default function Home() {
           }}
         />
 
-        {/* Cross */}
+        {/* Logo */}
         <div className="cross-glow-pulse" style={{ marginBottom: 36 }}>
-          <svg
-            width="64"
-            height="72"
-            viewBox="0 0 64 72"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="28" y="0" width="8" height="72" fill="white" rx="2" />
-            <rect x="4" y="22" width="56" height="8" fill="white" rx="2" />
-          </svg>
-        </div>
-
-        {/* Logo / Brand */}
-        <div
-          style={{
-            fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-            fontSize: "clamp(3rem, 8vw, 6.5rem)",
-            fontWeight: 900,
-            color: "#ffffff",
-            letterSpacing: "0.02em",
-            lineHeight: 1,
-            marginBottom: 20,
-          }}
-        >
-          3Nails.ai
+          <Image
+            src="/images/logo.png"
+            alt="3Nails.ai"
+            width={280}
+            height={100}
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </div>
 
         {/* Tagline */}

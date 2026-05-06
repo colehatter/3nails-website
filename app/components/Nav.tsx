@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Nav() {
@@ -40,31 +41,17 @@ export default function Nav() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 10,
               textDecoration: "none",
             }}
           >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="12" y="2" width="4" height="24" fill="white" rx="1" />
-              <rect x="4" y="10" width="20" height="4" fill="white" rx="1" />
-            </svg>
-            <span
-              style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', serif",
-                fontSize: 18,
-                fontWeight: 700,
-                color: "#ffffff",
-                letterSpacing: "0.02em",
-              }}
-            >
-              3Nails.ai
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="3Nails.ai"
+              height={36}
+              width={160}
+              style={{ objectFit: "contain" }}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav Links */}
